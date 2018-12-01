@@ -98,8 +98,9 @@ class SeriesTableViewController: UITableViewController {
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navCon = segue.destination as! UINavigationController
         
-        let storiesVC = segue.destination as! StoriesTableViewController
+        let storiesVC = navCon.topViewController as! StoriesTableViewController
         let indexPath = tableView.indexPathForSelectedRow!
         let stories = frc.sections?[indexPath.section].objects as! [Story]
         let name = frc.sections?[indexPath.section].name
