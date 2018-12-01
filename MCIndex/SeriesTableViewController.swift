@@ -34,8 +34,10 @@ class SeriesTableViewController: UITableViewController {
     
     fileprivate lazy var frc : NSFetchedResultsController<Story> = {
         let storyFetch : NSFetchRequest<Story> = Story.fetchRequest()
-        let sortDescriptors = NSSortDescriptor(key: #keyPath(Story.seriesName), ascending: true)
-        storyFetch.sortDescriptors = [sortDescriptors]
+        let sortBySeries = NSSortDescriptor(key: #keyPath(Story.seriesName), ascending: true)
+        let sortByVolume = NSSortDescriptor(key: #keyPath(Story.inVolume), ascending: true )
+        let sortByOrder = NSSortDescriptor(key: #keyPath(Story.order), ascending: true)
+        storyFetch.sortDescriptors = [sortBySeries,sortByVolume,sortByOrder]
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: storyFetch, managedObjectContext: container.viewContext, sectionNameKeyPath: #keyPath(Story.seriesName), cacheName: nil)
         return fetchedResultsController
     }()
@@ -53,9 +55,7 @@ class SeriesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesCell", for: indexPath)
         guard let sections = frc.sections else {fatalError("no sections in FRC")}
         let secInfo = sections[indexPath.section]
-        
-        let seriesTitle = secInfo.name
-        cell.textLabel?.text = seriesTitle
+        cell.textLabel?.text = secInfo.name
         return cell
     }
   
@@ -100,8 +100,10 @@ class SeriesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let storiesVC = segue.destination as! StoriesTableViewController
-        let indexPath = tableView.indexPathForSelectedRow
-        let stories = frc.sections?[indexPath?.section ?? 0].objects as! [Story]
+        let indexPath = tableView.indexPathForSelectedRow!
+        let stories = frc.sections?[indexPath.section].objects as! [Story]
+        let name = frc.sections?[indexPath.section].name
+        storiesVC.title = name
         storiesVC.inject(stories)
     }
 

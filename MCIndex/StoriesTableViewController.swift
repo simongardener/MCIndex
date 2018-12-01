@@ -15,6 +15,7 @@ class StoriesTableViewController: UITableViewController {
         super.viewDidLoad()
         assertDependencies()
        
+        
     }
 
     // MARK: - Table view data source
@@ -31,7 +32,9 @@ class StoriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StoryCell", for: indexPath)
         let story = stories[indexPath.row]
-        cell.textLabel?.text = story.title ?? "untitled"
+        var storyTitle = "\(story.title!)"
+        if storyTitle == "" { storyTitle = "untitled" }
+        cell.textLabel?.text = storyTitle
         return cell
     }
 

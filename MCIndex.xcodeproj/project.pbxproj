@@ -28,15 +28,15 @@
 		F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F453410521B1F21E00FDC49C /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
-		F453411021B2035800FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453410D21B2035700FDC49C /* DreddIndex.sqlite */; };
-		F453411121B2035800FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453410D21B2035700FDC49C /* DreddIndex.sqlite */; };
-		F453411221B2035800FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453410D21B2035700FDC49C /* DreddIndex.sqlite */; };
-		F453411321B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */; };
-		F453411421B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */; };
-		F453411521B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */; };
-		F453411621B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */; };
-		F453411721B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */; };
-		F453411821B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */; };
+		F453412221B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */; };
+		F453412321B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */; };
+		F453412421B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */; };
+		F453412521B22D4C00FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453412021B22D4C00FDC49C /* DreddIndex.sqlite */; };
+		F453412621B22D4C00FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453412021B22D4C00FDC49C /* DreddIndex.sqlite */; };
+		F453412721B22D4C00FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453412021B22D4C00FDC49C /* DreddIndex.sqlite */; };
+		F453412821B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */; };
+		F453412921B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */; };
+		F453412A21B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,9 +76,9 @@
 		F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesTableViewController.swift; sourceTree = "<group>"; };
 		F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
 		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		F453410D21B2035700FDC49C /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
-		F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
-		F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-wal"; sourceTree = "<group>"; };
+		F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-wal"; sourceTree = "<group>"; };
+		F453412021B22D4C00FDC49C /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
+		F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +109,6 @@
 		F424E87421B1EB250010B2F6 = {
 			isa = PBXGroup;
 			children = (
-				F424E8C521B1EC820010B2F6 /* Injectable.swift */,
 				F424E87F21B1EB250010B2F6 /* MCIndex */,
 				F424E89721B1EB250010B2F6 /* MCIndexTests */,
 				F424E8A221B1EB250010B2F6 /* MCIndexUITests */,
@@ -130,6 +129,8 @@
 		F424E87F21B1EB250010B2F6 /* MCIndex */ = {
 			isa = PBXGroup;
 			children = (
+				F453411A21B2220E00FDC49C /* Protocols */,
+				F453411921B221EC00FDC49C /* Extensions */,
 				F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */,
 				F453410821B2026D00FDC49C /* DataModel Group */,
 				F424E8B521B1EC0F0010B2F6 /* StoriesTableViewController.swift */,
@@ -175,11 +176,26 @@
 		F453410921B2028800FDC49C /* Seed database */ = {
 			isa = PBXGroup;
 			children = (
-				F453410D21B2035700FDC49C /* DreddIndex.sqlite */,
-				F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */,
-				F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */,
+				F453412021B22D4C00FDC49C /* DreddIndex.sqlite */,
+				F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */,
+				F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */,
 			);
 			path = "Seed database";
+			sourceTree = "<group>";
+		};
+		F453411921B221EC00FDC49C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F453411A21B2220E00FDC49C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F424E8C521B1EC820010B2F6 /* Injectable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,10 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F453411321B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */,
-				F453411621B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */,
-				F453411021B2035800FDC49C /* DreddIndex.sqlite in Resources */,
+				F453412521B22D4C00FDC49C /* DreddIndex.sqlite in Resources */,
+				F453412821B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */,
 				F424E88E21B1EB250010B2F6 /* LaunchScreen.storyboard in Resources */,
+				F453412221B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */,
 				F424E88B21B1EB250010B2F6 /* Assets.xcassets in Resources */,
 				F424E88621B1EB250010B2F6 /* Main.storyboard in Resources */,
 			);
@@ -299,9 +315,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F453411121B2035800FDC49C /* DreddIndex.sqlite in Resources */,
-				F453411721B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */,
-				F453411421B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */,
+				F453412621B22D4C00FDC49C /* DreddIndex.sqlite in Resources */,
+				F453412921B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */,
+				F453412321B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,9 +325,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F453411221B2035800FDC49C /* DreddIndex.sqlite in Resources */,
-				F453411821B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */,
-				F453411521B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */,
+				F453412721B22D4C00FDC49C /* DreddIndex.sqlite in Resources */,
+				F453412A21B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */,
+				F453412421B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

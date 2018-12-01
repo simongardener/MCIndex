@@ -12,6 +12,7 @@
         <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="letterer" inverseEntity="Story" syncable="YES"/>
     </entity>
     <entity name="Story" representedClassName="Story" syncable="YES" codeGenerationType="class">
+        <attribute name="inVolume" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="issuesAll" attributeType="String" syncable="YES"/>
         <attribute name="issuesRun" attributeType="String" syncable="YES"/>
         <attribute name="needsBetterCopy" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -39,11 +40,11 @@
         <relationship name="stories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Story" inverseName="writers" inverseEntity="Story" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Story" positionX="-293.96484375" positionY="-203.1171875" width="128" height="223"/>
-        <element name="Volume" positionX="-505.6015625" positionY="-141.46484375" width="128" height="150"/>
         <element name="Artist" positionX="-137.9296875" positionY="-236.703125" width="128" height="75"/>
-        <element name="Writer" positionX="-125.10546875" positionY="10.265625" width="128" height="73"/>
-        <element name="Letterer" positionX="-103.06640625" positionY="-82.5078125" width="128" height="75"/>
         <element name="Colorist" positionX="-104.98828125" positionY="-151.34375" width="128" height="60"/>
+        <element name="Letterer" positionX="-103.06640625" positionY="-82.5078125" width="128" height="75"/>
+        <element name="Story" positionX="-293.96484375" positionY="-203.1171875" width="128" height="240"/>
+        <element name="Volume" positionX="-505.6015625" positionY="-141.46484375" width="128" height="150"/>
+        <element name="Writer" positionX="-125.10546875" positionY="10.265625" width="128" height="73"/>
     </elements>
 </model>

@@ -14,12 +14,13 @@ class DreddTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
-        for view in viewControllers! {
-            if let volumeView = view as? VolumesTableViewController {
+        for view in viewControllers!  {
+            let navView = view as! UINavigationController
+            if let volumeView = navView.topViewController as? VolumesTableViewController {
                 print("got a volume view")
             volumeView.inject(dataModel.container)
             }
-            if let seriesView = view as? SeriesTableViewController {
+            if let seriesView = navView.topViewController as? SeriesTableViewController {
                 print("got a series view")
                 seriesView.inject(dataModel.container)
             }

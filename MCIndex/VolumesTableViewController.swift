@@ -55,7 +55,7 @@ class VolumesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VolumeCell", for: indexPath)
         let volume = frc.object(at: indexPath)
-        cell.textLabel?.text = "v\(volume.number) \(volume.title!))"
+        cell.textLabel?.text = "v\(volume.number) \(volume.title!)"
 
         return cell
     }
