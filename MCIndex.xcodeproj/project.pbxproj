@@ -8,13 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E88021B1EB250010B2F6 /* AppDelegate.swift */; };
-		F424E88321B1EB250010B2F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E88221B1EB250010B2F6 /* ViewController.swift */; };
 		F424E88621B1EB250010B2F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424E88421B1EB250010B2F6 /* Main.storyboard */; };
-		F424E88921B1EB250010B2F6 /* MCIndex.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F424E88721B1EB250010B2F6 /* MCIndex.xcdatamodeld */; };
 		F424E88B21B1EB250010B2F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F424E88A21B1EB250010B2F6 /* Assets.xcassets */; };
 		F424E88E21B1EB250010B2F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424E88C21B1EB250010B2F6 /* LaunchScreen.storyboard */; };
 		F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E89821B1EB250010B2F6 /* MCIndexTests.swift */; };
 		F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8A321B1EB250010B2F6 /* MCIndexUITests.swift */; };
+		F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */; };
+		F424E8B321B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */; };
+		F424E8B421B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */; };
+		F424E8B621B1EC0F0010B2F6 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B521B1EC0F0010B2F6 /* StoriesTableViewController.swift */; };
+		F424E8B721B1EC0F0010B2F6 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B521B1EC0F0010B2F6 /* StoriesTableViewController.swift */; };
+		F424E8B821B1EC0F0010B2F6 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B521B1EC0F0010B2F6 /* StoriesTableViewController.swift */; };
+		F424E8BA21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
+		F424E8BB21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
+		F424E8BC21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
+		F424E8C621B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
+		F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
+		F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
+		F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
+		F453410521B1F21E00FDC49C /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
+		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
+		F453411021B2035800FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453410D21B2035700FDC49C /* DreddIndex.sqlite */; };
+		F453411121B2035800FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453410D21B2035700FDC49C /* DreddIndex.sqlite */; };
+		F453411221B2035800FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453410D21B2035700FDC49C /* DreddIndex.sqlite */; };
+		F453411321B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */; };
+		F453411421B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */; };
+		F453411521B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */; };
+		F453411621B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */; };
+		F453411721B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */; };
+		F453411821B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +59,7 @@
 /* Begin PBXFileReference section */
 		F424E87D21B1EB250010B2F6 /* MCIndex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCIndex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424E88021B1EB250010B2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F424E88221B1EB250010B2F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F424E88521B1EB250010B2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F424E88821B1EB250010B2F6 /* MCIndex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MCIndex.xcdatamodel; sourceTree = "<group>"; };
 		F424E88A21B1EB250010B2F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F424E88D21B1EB250010B2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F424E88F21B1EB250010B2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +69,16 @@
 		F424E89F21B1EB250010B2F6 /* MCIndexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCIndexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424E8A321B1EB250010B2F6 /* MCIndexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCIndexUITests.swift; sourceTree = "<group>"; };
 		F424E8A521B1EB250010B2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreddIndex.xcdatamodel; sourceTree = "<group>"; };
+		F424E8B521B1EC0F0010B2F6 /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
+		F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreddTabBarController.swift; sourceTree = "<group>"; };
+		F424E8C521B1EC820010B2F6 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesTableViewController.swift; sourceTree = "<group>"; };
+		F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
+		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F453410D21B2035700FDC49C /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
+		F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
+		F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-wal"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +109,7 @@
 		F424E87421B1EB250010B2F6 = {
 			isa = PBXGroup;
 			children = (
+				F424E8C521B1EC820010B2F6 /* Injectable.swift */,
 				F424E87F21B1EB250010B2F6 /* MCIndex */,
 				F424E89721B1EB250010B2F6 /* MCIndexTests */,
 				F424E8A221B1EB250010B2F6 /* MCIndexUITests */,
@@ -99,13 +130,17 @@
 		F424E87F21B1EB250010B2F6 /* MCIndex */ = {
 			isa = PBXGroup;
 			children = (
+				F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */,
+				F453410821B2026D00FDC49C /* DataModel Group */,
+				F424E8B521B1EC0F0010B2F6 /* StoriesTableViewController.swift */,
+				F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */,
 				F424E88021B1EB250010B2F6 /* AppDelegate.swift */,
-				F424E88221B1EB250010B2F6 /* ViewController.swift */,
 				F424E88421B1EB250010B2F6 /* Main.storyboard */,
 				F424E88A21B1EB250010B2F6 /* Assets.xcassets */,
 				F424E88C21B1EB250010B2F6 /* LaunchScreen.storyboard */,
 				F424E88F21B1EB250010B2F6 /* Info.plist */,
-				F424E88721B1EB250010B2F6 /* MCIndex.xcdatamodeld */,
+				F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */,
+				F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */,
 			);
 			path = MCIndex;
 			sourceTree = "<group>";
@@ -126,6 +161,25 @@
 				F424E8A521B1EB250010B2F6 /* Info.plist */,
 			);
 			path = MCIndexUITests;
+			sourceTree = "<group>";
+		};
+		F453410821B2026D00FDC49C /* DataModel Group */ = {
+			isa = PBXGroup;
+			children = (
+				F453410921B2028800FDC49C /* Seed database */,
+				F453410621B2015700FDC49C /* DataModel.swift */,
+			);
+			path = "DataModel Group";
+			sourceTree = "<group>";
+		};
+		F453410921B2028800FDC49C /* Seed database */ = {
+			isa = PBXGroup;
+			children = (
+				F453410D21B2035700FDC49C /* DreddIndex.sqlite */,
+				F453410E21B2035800FDC49C /* DreddIndex.sqlite-shm */,
+				F453410F21B2035800FDC49C /* DreddIndex.sqlite-wal */,
+			);
+			path = "Seed database";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F453411321B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */,
+				F453411621B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */,
+				F453411021B2035800FDC49C /* DreddIndex.sqlite in Resources */,
 				F424E88E21B1EB250010B2F6 /* LaunchScreen.storyboard in Resources */,
 				F424E88B21B1EB250010B2F6 /* Assets.xcassets in Resources */,
 				F424E88621B1EB250010B2F6 /* Main.storyboard in Resources */,
@@ -242,6 +299,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F453411121B2035800FDC49C /* DreddIndex.sqlite in Resources */,
+				F453411721B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */,
+				F453411421B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +309,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F453411221B2035800FDC49C /* DreddIndex.sqlite in Resources */,
+				F453411821B2035800FDC49C /* DreddIndex.sqlite-wal in Resources */,
+				F453411521B2035800FDC49C /* DreddIndex.sqlite-shm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +322,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F424E88321B1EB250010B2F6 /* ViewController.swift in Sources */,
-				F424E88921B1EB250010B2F6 /* MCIndex.xcdatamodeld in Sources */,
+				F424E8B621B1EC0F0010B2F6 /* StoriesTableViewController.swift in Sources */,
+				F424E8BA21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
+				F453410521B1F21E00FDC49C /* SeriesTableViewController.swift in Sources */,
+				F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */,
 				F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */,
+				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
+				F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
+				F424E8C621B1EC820010B2F6 /* Injectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F424E8B721B1EC0F0010B2F6 /* StoriesTableViewController.swift in Sources */,
+				F424E8BB21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
+				F424E8B321B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
 				F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */,
+				F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +349,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F424E8B821B1EC0F0010B2F6 /* StoriesTableViewController.swift in Sources */,
+				F424E8BC21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
+				F424E8B421B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
 				F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */,
+				F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,19 +666,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		F424E88721B1EB250010B2F6 /* MCIndex.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				F424E88821B1EB250010B2F6 /* MCIndex.xcdatamodel */,
-			);
-			currentVersion = F424E88821B1EB250010B2F6 /* MCIndex.xcdatamodel */;
-			path = MCIndex.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = F424E87521B1EB250010B2F6 /* Project object */;
 }

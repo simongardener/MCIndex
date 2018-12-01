@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18B75" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Artist" representedClassName="Artist" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="artists" inverseEntity="Story" syncable="YES"/>
+    </entity>
+    <entity name="Colorist" representedClassName="Colorist" syncable="YES" codeGenerationType="class">
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="colorist" inverseEntity="Story" syncable="YES"/>
+    </entity>
+    <entity name="Letterer" representedClassName="Letterer" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="letterer" inverseEntity="Story" syncable="YES"/>
+    </entity>
+    <entity name="Story" representedClassName="Story" syncable="YES" codeGenerationType="class">
+        <attribute name="issuesAll" attributeType="String" syncable="YES"/>
+        <attribute name="issuesRun" attributeType="String" syncable="YES"/>
+        <attribute name="needsBetterCopy" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="order" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="owned" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="seriesName" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
+        <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artist" inverseName="stories" inverseEntity="Artist" syncable="YES"/>
+        <relationship name="colorist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Colorist" inverseName="stories" inverseEntity="Colorist" syncable="YES"/>
+        <relationship name="letterer" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Letterer" inverseName="stories" inverseEntity="Letterer" syncable="YES"/>
+        <relationship name="volume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Volume" inverseName="stories" inverseEntity="Volume" syncable="YES"/>
+        <relationship name="writers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Writer" inverseName="stories" inverseEntity="Writer" syncable="YES"/>
+    </entity>
+    <entity name="Volume" representedClassName="Volume" syncable="YES" codeGenerationType="class">
+        <attribute name="coverArtist" attributeType="String" minValueString="3" syncable="YES"/>
+        <attribute name="dateReleased" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="issue" attributeType="Integer 16" minValueString="1" maxValueString="90" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="number" attributeType="Integer 16" minValueString="1" maxValueString="90" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="owned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="volume" inverseEntity="Story" syncable="YES"/>
+    </entity>
+    <entity name="Writer" representedClassName="Writer" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="stories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Story" inverseName="writers" inverseEntity="Story" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Story" positionX="-293.96484375" positionY="-203.1171875" width="128" height="223"/>
+        <element name="Volume" positionX="-505.6015625" positionY="-141.46484375" width="128" height="150"/>
+        <element name="Artist" positionX="-137.9296875" positionY="-236.703125" width="128" height="75"/>
+        <element name="Writer" positionX="-125.10546875" positionY="10.265625" width="128" height="73"/>
+        <element name="Letterer" positionX="-103.06640625" positionY="-82.5078125" width="128" height="75"/>
+        <element name="Colorist" positionX="-104.98828125" positionY="-151.34375" width="128" height="60"/>
+    </elements>
+</model>
