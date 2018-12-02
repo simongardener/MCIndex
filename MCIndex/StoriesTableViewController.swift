@@ -13,18 +13,35 @@ class StoriesTableViewController: UITableViewController {
     
     var stories : [Story]!
     var filteredStories = [Story]()
-    var searchController = UISearchController()
+    var searchController = UISearchController(searchResultsController: nil)
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
         
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Stories"
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
+        self.tableView.tableFooterView = UIView() // makes empty rows disappear
+        setupSearchController()
+//        searchController.searchResultsUpdater = self
+//        searchController.hidesNavigationBarDuringPresentation = false
+//       // searchController.obscuresBackgroundDuringPresentation = false
+//        searchController.dimsBackgroundDuringPresentation = false
+//        searchController.searchBar.placeholder = "Search Stories"
+//        tableView.tableHeaderView = searchController.searchBar
+//       // navigationItem.searchController = searchController
+//        definesPresentationContext = true
         
     }
+    
+    func setupSearchController() {
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
+        searchController.searchBar.placeholder = "Search by Story"
+        searchController.hidesNavigationBarDuringPresentation = false
+        
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    
     //filtering methods
     func isFiltering() -> Bool {
         return searchController.isActive && !searchBarIsEmpty()
