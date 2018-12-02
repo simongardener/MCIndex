@@ -2,7 +2,7 @@
 //  StoriesTableViewController.swift
 //  MCIndex
 //
-//  Created by Simon Gardener on 30/11/2018.
+//  Created by Simon Gardener on 02/12/2018.
 //  Copyright © 2018 Simon Gardener. All rights reserved.
 //
 
@@ -14,31 +14,37 @@ class StoriesTableViewController: UITableViewController {
     var stories : [Story]!
     var filteredStories = [Story]()
     var searchController = UISearchController(searchResultsController: nil)
+    let intitialSearchBarOffset = 56.0
+    let cancelSearchBarOffset = -8.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
         
         self.tableView.tableFooterView = UIView() // makes empty rows disappear
-        setupSearchController()
-//        searchController.searchResultsUpdater = self
-//        searchController.hidesNavigationBarDuringPresentation = false
-//       // searchController.obscuresBackgroundDuringPresentation = false
-//        searchController.dimsBackgroundDuringPresentation = false
-//        searchController.searchBar.placeholder = "Search Stories"
-//        tableView.tableHeaderView = searchController.searchBar
-//       // navigationItem.searchController = searchController
-//        definesPresentationContext = true
+        if stories.count > 12 {
+            setupSearchController()
+        }
+        //        searchController.searchResultsUpdater = self
+        //        searchController.hidesNavigationBarDuringPresentation = false
+        //       // searchController.obscuresBackgroundDuringPresentation = false
+        //        searchController.dimsBackgroundDuringPresentation = false
+        //        searchController.searchBar.placeholder = "Search Stories"
+        //        tableView.tableHeaderView = searchController.searchBar
+        //       // navigationItem.searchController = searchController
+        //        definesPresentationContext = true
         
     }
     
     func setupSearchController() {
+        hideSearchBar(yAxisOffset: intitialSearchBarOffset)
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
         searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
         searchController.searchBar.placeholder = "Search by Story"
         searchController.hidesNavigationBarDuringPresentation = false
-        
+        searchController.delegate = self
         tableView.tableHeaderView = searchController.searchBar
     }
     
@@ -66,7 +72,7 @@ class StoriesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
+        
         if isFiltering() {
             return filteredStories.count
         }
@@ -87,14 +93,21 @@ class StoriesTableViewController: UITableViewController {
         cell.textLabel?.text = storyTitle
         return cell
     }
-
     
+    fileprivate func hideSearchBar(yAxisOffset : Double){
+         self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
+    }
 }
 
+extension StoriesTableViewController : UISearchControllerDelegate {
+    func didDismissSearchController(_ searchController: UISearchController) {
+    hideSearchBar(yAxisOffset: cancelSearchBarOffset)
+    }
+}
 extension StoriesTableViewController : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         print("delegate got the message")
-
+        
         filterContentForSearchText(searchController.searchBar.text!)
     }
     
