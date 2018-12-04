@@ -14,8 +14,8 @@ class SeriesTableViewController: UITableViewController {
     var container : NSPersistentContainer!
     override func viewDidLoad() {
         super.viewDidLoad()
-        assertDependencies()
         print("loading series view")
+        assertDependencies()
         fetchStories()
         
     }
@@ -111,18 +111,9 @@ class SeriesTableViewController: UITableViewController {
     }
 
 }
-extension SeriesTableViewController : Injectable {
-    
-    func inject(_ persistentContainer : NSPersistentContainer) {
-        container = persistentContainer
-    }
-    
+
+extension SeriesTableViewController : NeedsContainer{
     func assertDependencies() {
-        assert(container  != nil,"no container passes into Dredd Series TVC")
+        assert(container != nil, "Didnt get a container passed in.")
     }
-    
-    
-    typealias T = NSPersistentContainer
-    
-  
 }

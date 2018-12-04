@@ -1,63 +1,70 @@
 //
-//  VolumesTableViewController.swift
+//  VolumeDetailTableViewController.swift
 //  MCIndex
 //
-//  Created by Simon Gardener on 30/11/2018.
+//  Created by Simon Gardener on 04/12/2018.
 //  Copyright © 2018 Simon Gardener. All rights reserved.
 //
 
 import UIKit
-import CoreData
 
-class VolumesTableViewController: UITableViewController {
+class VolumeDetailTableViewController: UITableViewController {
 
-    var container: NSPersistentContainer!
-    
+    var volume: Volume!
+    enum TableSection : Int, CaseIterable {
+        case title, published, story
+    }
+    let cellId = ["VolumeCell","PublishedCell","StoryCell"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
-        print("loading volumes tableview")
-        fetchVolumes()
-
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+    
+    override func numberOfSections(in tableView: UITableView) -> Int{
+        return TableSection.allCases.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = frc.sections?[section] else { return 0 }
-        print("number of volumes = \(section.numberOfObjects)")
-        return section.numberOfObjects
-    }
-   
-    fileprivate lazy var frc : NSFetchedResultsController<Volume> = {
-        let volumeFetch : NSFetchRequest<Volume> = Volume.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: #keyPath(Volume.number), ascending: true)
-        volumeFetch.sortDescriptors = [sortDescriptor]
-        let  fetchedResultsController = NSFetchedResultsController(fetchRequest: volumeFetch, managedObjectContext: container.viewContext, sectionNameKeyPath: nil, cacheName: nil)
-        return fetchedResultsController
-    }()
-    
-    fileprivate func fetchVolumes(){
-        do {
-            try frc.performFetch()
-        }
-        catch {
-            print(" unable to fetch volumes")
-            print("\(error), \(error.localizedDescription)")
+      
+        if section == TableSection.story.rawValue {
+            return (volume.stories?.count)!
+        }else {
+            return 1
         }
     }
 
+ 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "VolumeCell", for: indexPath)
-        let volume = frc.object(at: indexPath)
-        cell.textLabel?.text = "v\(volume.number) \(volume.title!)"
 
-        return cell
+        
+        switch  indexPath.section {
+        case TableSection.title.rawValue:
+            
+          let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! VolumeCell
+            cell.configure(with: volume)
+            return cell
+            
+        case TableSection.published.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! PublishedCell
+            cell.configure(with: volume)
+            return cell
+            
+        case TableSection.story.rawValue:
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! StoryDetailCell
+            cell.configure(with: volume, at: indexPath.row)
+            return cell
+        default :
+            return UITableViewCell()
+     
+        }
+
+        
+
+    
     }
 
 
@@ -107,19 +114,16 @@ class VolumesTableViewController: UITableViewController {
     */
 
 }
-
-
-extension VolumesTableViewController : Injectable {
-    func inject(_ persistentContainer : NSPersistentContainer) {
-        container = persistentContainer
+extension VolumeDetailTableViewController : Injectable {
+    func inject(_ vol: Volume) {
+        volume = vol
     }
     
     func assertDependencies() {
-        assert(container  != nil,"no container passes into Dredd Volume VController")
+        assert(volume != nil, "volume details table view controller was not passed a volume")
     }
     
-    
-    typealias T = NSPersistentContainer
-    
+    typealias T = Volume
+
 }
 
