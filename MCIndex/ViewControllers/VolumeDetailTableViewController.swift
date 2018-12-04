@@ -12,9 +12,9 @@ class VolumeDetailTableViewController: UITableViewController {
 
     var volume: Volume!
     enum TableSection : Int, CaseIterable {
-        case title, story, published
+        case title, cover, story, published
     }
-    let cellId = ["VolumeCell","StoryCell","PublishedCell"]
+    let cellId = ["VolumeCell","CoverCell", "StoryCell","PublishedCell"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,13 @@ class VolumeDetailTableViewController: UITableViewController {
             cell.configure(with: volume)
             return cell
             
+        case TableSection.cover.rawValue:
+
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! ArtistCell
+
+            cell.configure(with: volume)
+            return cell
+
         case TableSection.published.rawValue:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! PublishedCell
             cell.configure(with: volume)
