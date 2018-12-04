@@ -35,6 +35,6 @@ class StoryDetailCell: UITableViewCell {
             source.text = issuesRun
         }else {
             source.text = "unknown"
-        }
+        }	
     }
 }
