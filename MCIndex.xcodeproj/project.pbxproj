@@ -54,6 +54,7 @@
 		F47CD15D21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
 		F47CD15E21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
 		F47CD15F21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
+		F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */; };
 		F4AB234A21B3DAD300E027BB /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */; };
 		FB7C2C551FEC289E2ACDE703 /* Pods_MCIndex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F94BA775C0E58AD6D68B580 /* Pods_MCIndex.framework */; };
 /* End PBXBuildFile section */
@@ -112,6 +113,7 @@
 		F453412021B22D4C00FDC49C /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
 		F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
 		F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeFoldingCell.swift; sourceTree = "<group>"; };
+		F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBySeriesCell.swift; sourceTree = "<group>"; };
 		F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
 		FE58103D6974FBEF38DCE277 /* Pods-MCIndexTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCIndexTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCIndexTests/Pods-MCIndexTests.release.xcconfig"; sourceTree = "<group>"; };
 		FFD90E8F1695B656F12E3D32 /* Pods-MCIndexUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCIndexUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MCIndexUITests/Pods-MCIndexUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 				F401903821B68F2100754C77 /* VolumeCell.swift */,
 				F4217BE921B6A46000F63601 /* PublishedCell.swift */,
 				F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */,
+				F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
 				F43F6CC021B5BB6B005E4683 /* needsContainer.swift in Sources */,
 				F4AB234A21B3DAD300E027BB /* StoriesTableViewController.swift in Sources */,
+				F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */,
 				F424E8C621B1EC820010B2F6 /* Injectable.swift in Sources */,
 				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
 			);

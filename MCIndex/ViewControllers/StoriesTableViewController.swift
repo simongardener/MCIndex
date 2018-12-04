@@ -81,16 +81,15 @@ class StoriesTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoryCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "StoryCell", for: indexPath) as! StoryBySeriesCell
+        
         let story : Story
         if isFiltering() {
             story = filteredStories[indexPath.row]
         }else{
             story = stories[indexPath.row]
         }
-        var storyTitle = "\(story.title!)"
-        if storyTitle == "" { storyTitle = story.seriesName! }
-        cell.textLabel?.text = storyTitle
+        cell.configure(with: story)
         return cell
     }
     

@@ -12,9 +12,9 @@ class VolumeDetailTableViewController: UITableViewController {
 
     var volume: Volume!
     enum TableSection : Int, CaseIterable {
-        case title, published, story
+        case title, story, published
     }
-    let cellId = ["VolumeCell","PublishedCell","StoryCell"]
+    let cellId = ["VolumeCell","StoryCell","PublishedCell"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

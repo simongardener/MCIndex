@@ -59,7 +59,10 @@ class VolumesTableViewController: UITableViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard let ip = tableView.indexPathForSelectedRow else { fatalError()}
+        guard let view = segue.destination as? VolumeDetailTableViewController else {fatalError("wrong kind of viewController")}
+        let volume = frc.object(at: ip)
+        view.inject(volume)
     }
 }
 

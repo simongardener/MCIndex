@@ -1,5 +1,5 @@
 //
-//  ThrillDetailCell.swift
+//  StoryBySeriesCell.swift
 //  MCIndex
 //
 //  Created by Simon Gardener on 04/12/2018.
@@ -8,31 +8,29 @@
 
 import UIKit
 
-class StoryDetailCell: UITableViewCell {
+class StoryBySeriesCell: UITableViewCell {
 
-    @IBOutlet weak var seriesName: UILabel!
+    @IBOutlet weak var redBlock: UIView!
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var source: UILabel!
+    @IBOutlet weak var volumeNumber: UILabel!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        redBlock.layer.cornerRadius = 16
+        redBlock.layer.masksToBounds = true
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
-    func configure(with volume:Volume, at index : Int){
-        let stories = volume.stories!.sortedArray(using:[NSSortDescriptor(key: "order", ascending: true)]) as! [Story]
-        let story = stories[index]
+    func configure(with story: Story){
+        volumeNumber.text = "\(story.inVolume)"
         var theTitle = story.title
         if theTitle == "" { theTitle = story.seriesName}
         title.text = theTitle
-        seriesName.text = story.seriesName
-        if let issuesRun = story.issuesRun {
-        source.text = issuesRun
+        if let issuesRun = story.issuesRun, issuesRun.isEmpty == false {
+            source.text = issuesRun
         }else {
             source.text = "unknown"
         }
