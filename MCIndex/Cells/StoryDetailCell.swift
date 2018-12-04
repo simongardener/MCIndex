@@ -31,8 +31,8 @@ class StoryDetailCell: UITableViewCell {
         if theTitle == "" { theTitle = story.seriesName}
         title.text = theTitle
         seriesName.text = story.seriesName
-        if let issuesRun = story.issuesRun {
-        source.text = issuesRun
+        if let issuesRun = story.issuesRun, issuesRun.isEmpty == false {
+            source.text = issuesRun
         }else {
             source.text = "unknown"
         }
