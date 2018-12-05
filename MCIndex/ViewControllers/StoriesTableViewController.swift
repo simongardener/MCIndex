@@ -14,7 +14,7 @@ class StoriesTableViewController: UITableViewController {
     var stories : [Story]!
     var filteredStories = [Story]()
     var searchController = UISearchController(searchResultsController: nil)
-    let intitialSearchBarOffset = 56.0
+    let initialSearchBarOffset = 56.0
     let cancelSearchBarOffset = -8.0
     
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class StoriesTableViewController: UITableViewController {
     }
     
     func setupSearchController() {
-        hideSearchBar(yAxisOffset: intitialSearchBarOffset)
+        hideSearchBar(yAxisOffset: initialSearchBarOffset)
         definesPresentationContext = true
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
@@ -109,8 +109,6 @@ extension StoriesTableViewController : UISearchResultsUpdating {
         
         filterContentForSearchText(searchController.searchBar.text!)
     }
-    
-    
 }
 
 extension StoriesTableViewController : Injectable {

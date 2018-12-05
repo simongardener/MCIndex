@@ -12,18 +12,57 @@ import CoreData
 class SeriesTableViewController: UITableViewController {
 
     var container : NSPersistentContainer!
+    var filtered = [NSFetchedResultsSectionInfo]()
+    var searchController = UISearchController(searchResultsController: nil)
+    let initialSearchBarOffset = 56.0
+    let cancelSearchBarOffset = -8.0
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("loading series view")
         assertDependencies()
         fetchStories()
-        
+        setupSearchController()
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+       
+    }
+   
+    func setupSearchController() {
+        hideSearchBar(yAxisOffset: initialSearchBarOffset)
+        definesPresentationContext = true
+        searchController.dimsBackgroundDuringPresentation = false
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
+        searchController.searchBar.placeholder = "Search by Series"
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.delegate = self
+        tableView.tableHeaderView = searchController.searchBar
+    }
+    //filtering methods
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    func searchBarIsEmpty() -> Bool {
+        // Returns true if the text is empty or nil
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        filtered = frc.sections!.filter { $0.name.lowercased().contains(searchText.lowercased())}
+        tableView.reloadData()
+    }
+    fileprivate func hideSearchBar(yAxisOffset : Double){
+        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        
+        if isFiltering() {
+            return filtered.count
+        }
         return frc.sections?.count ?? 0
     }
 
@@ -54,60 +93,34 @@ class SeriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SeriesCell", for: indexPath)
         guard let sections = frc.sections else {fatalError("no sections in FRC")}
+        if isFiltering(){
+            cell.textLabel?.text = filtered[indexPath.section].name 
+        } else {
         let secInfo = sections[indexPath.section]
-        cell.textLabel?.text = secInfo.name
+            cell.textLabel?.text = secInfo.name
+            
+        }
         return cell
     }
   
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let navCon = segue.destination as! UINavigationController
-//        let storiesVC = navCon.topViewController as! StoriesTableViewController
         
         let storiesVC = segue.destination as! StoriesTableViewController
         
         let indexPath = tableView.indexPathForSelectedRow!
-        let stories = frc.sections?[indexPath.section].objects as! [Story]
-        let name = frc.sections?[indexPath.section].name
-        storiesVC.title = name
-        storiesVC.inject(stories)
+        if isFiltering() {
+            let stories = filtered[indexPath.section].objects as! [Story]
+            let name = filtered[indexPath.section].name
+            storiesVC.title = name
+            storiesVC.inject(stories)
+        }else {
+            let stories = frc.sections?[indexPath.section].objects as! [Story]
+            let name = frc.sections?[indexPath.section].name
+            storiesVC.title = name
+            storiesVC.inject(stories)
+        }
     }
 
 }
@@ -115,5 +128,18 @@ class SeriesTableViewController: UITableViewController {
 extension SeriesTableViewController : NeedsContainer{
     func assertDependencies() {
         assert(container != nil, "Didnt get a container passed in.")
+    }
+}
+extension SeriesTableViewController : UISearchControllerDelegate {
+    func didDismissSearchController(_ searchController: UISearchController) {
+        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
+    }
+}
+
+extension SeriesTableViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        print("delegate got the message")
+        
+        filterContentForSearchText(searchController.searchBar.text!)
     }
 }
