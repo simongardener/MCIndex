@@ -96,13 +96,13 @@ class SeriesTableViewController: UITableViewController {
         if isFiltering(){
             cell.textLabel?.text = filtered[indexPath.section].name 
         } else {
-        let secInfo = sections[indexPath.section]
+            let secInfo = sections[indexPath.section]
             cell.textLabel?.text = secInfo.name
-            
         }
         return cell
     }
-  
+
+    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

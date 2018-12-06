@@ -12,6 +12,9 @@
 		F401903921B68F2100754C77 /* VolumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401903821B68F2100754C77 /* VolumeCell.swift */; };
 		F401904021B698C100754C77 /* VolumeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401903E21B698C100754C77 /* VolumeDetailTableViewController.swift */; };
 		F401904121B698C100754C77 /* VolumeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401903E21B698C100754C77 /* VolumeDetailTableViewController.swift */; };
+		F4165B0C21B976E2005CCDF0 /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */; };
+		F4165B0D21B976E2005CCDF0 /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */; };
+		F4165B0E21B976E2005CCDF0 /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */; };
 		F4217BE221B69DF100F63601 /* FoldingVolumesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BE021B69DF100F63601 /* FoldingVolumesTableView.swift */; };
 		F4217BE321B69DF100F63601 /* FoldingVolumesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BE021B69DF100F63601 /* FoldingVolumesTableView.swift */; };
 		F4217BE821B69FCC00F63601 /* VolumeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401903E21B698C100754C77 /* VolumeDetailTableViewController.swift */; };
@@ -40,17 +43,7 @@
 		F43F6CCA21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		F43F6CCB21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
-		F453410521B1F21E00FDC49C /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
-		F453412221B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */; };
-		F453412321B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */; };
-		F453412421B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */; };
-		F453412521B22D4C00FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453412021B22D4C00FDC49C /* DreddIndex.sqlite */; };
-		F453412621B22D4C00FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453412021B22D4C00FDC49C /* DreddIndex.sqlite */; };
-		F453412721B22D4C00FDC49C /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F453412021B22D4C00FDC49C /* DreddIndex.sqlite */; };
-		F453412821B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */; };
-		F453412921B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */; };
-		F453412A21B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */; };
 		F47CD15D21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
 		F47CD15E21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
 		F47CD15F21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
@@ -59,6 +52,7 @@
 		F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F483356D21B72C6A009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F4AB234A21B3DAD300E027BB /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */; };
+		F4B3F5C121B8814900992DCA /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		FB7C2C551FEC289E2ACDE703 /* Pods_MCIndex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F94BA775C0E58AD6D68B580 /* Pods_MCIndex.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +83,9 @@
 		E7318A3796FC7452E3CFF4E3 /* Pods-MCIndex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCIndex.release.xcconfig"; path = "Pods/Target Support Files/Pods-MCIndex/Pods-MCIndex.release.xcconfig"; sourceTree = "<group>"; };
 		F401903821B68F2100754C77 /* VolumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeCell.swift; sourceTree = "<group>"; };
 		F401903E21B698C100754C77 /* VolumeDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeDetailTableViewController.swift; sourceTree = "<group>"; };
+		F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
+		F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-wal"; sourceTree = "<group>"; };
+		F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
 		F4217BE021B69DF100F63601 /* FoldingVolumesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoldingVolumesTableView.swift; path = "/Users/Simon/Library/Autosave Information/MCIndex/MCIndex/ViewControllers/FoldingVolumesTableView.swift"; sourceTree = "<absolute>"; };
 		F4217BE621B69E2800F63601 /* FoldingVolumesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingVolumesTableView.swift; sourceTree = "<group>"; };
 		F4217BE921B6A46000F63601 /* PublishedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedCell.swift; sourceTree = "<group>"; };
@@ -112,9 +109,6 @@
 		F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesTableViewController.swift; sourceTree = "<group>"; };
 		F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
 		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-wal"; sourceTree = "<group>"; };
-		F453412021B22D4C00FDC49C /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
-		F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
 		F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeFoldingCell.swift; sourceTree = "<group>"; };
 		F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBySeriesCell.swift; sourceTree = "<group>"; };
 		F483356921B72858009F2C72 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
@@ -265,9 +259,9 @@
 		F453410921B2028800FDC49C /* Seed database */ = {
 			isa = PBXGroup;
 			children = (
-				F453412021B22D4C00FDC49C /* DreddIndex.sqlite */,
-				F453412121B22D4C00FDC49C /* DreddIndex.sqlite-shm */,
-				F453411F21B22D4C00FDC49C /* DreddIndex.sqlite-wal */,
+				F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */,
+				F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */,
+				F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */,
 			);
 			path = "Seed database";
 			sourceTree = "<group>";
@@ -402,11 +396,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F453412521B22D4C00FDC49C /* DreddIndex.sqlite in Resources */,
-				F453412821B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */,
+				F4165B0C21B976E2005CCDF0 /* DreddIndex.sqlite in Resources */,
+				F4165B0E21B976E2005CCDF0 /* DreddIndex.sqlite-shm in Resources */,
 				F424E88E21B1EB250010B2F6 /* LaunchScreen.storyboard in Resources */,
-				F453412221B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */,
 				F424E88B21B1EB250010B2F6 /* Assets.xcassets in Resources */,
+				F4165B0D21B976E2005CCDF0 /* DreddIndex.sqlite-wal in Resources */,
 				F424E88621B1EB250010B2F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,9 +409,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F453412621B22D4C00FDC49C /* DreddIndex.sqlite in Resources */,
-				F453412921B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */,
-				F453412321B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +416,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F453412721B22D4C00FDC49C /* DreddIndex.sqlite in Resources */,
-				F453412A21B22D4C00FDC49C /* DreddIndex.sqlite-shm in Resources */,
-				F453412421B22D4C00FDC49C /* DreddIndex.sqlite-wal in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,22 +503,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4B3F5C121B8814900992DCA /* SeriesTableViewController.swift in Sources */,
 				F483356D21B72C6A009F2C72 /* ArtistCell.swift in Sources */,
 				F4217BE821B69FCC00F63601 /* VolumeDetailTableViewController.swift in Sources */,
 				F424E8BA21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
-				F453410521B1F21E00FDC49C /* SeriesTableViewController.swift in Sources */,
 				F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */,
 				F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */,
-				F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */,
 				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
-				F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */,
 				F47CD15D21B563D600854421 /* VolumeFoldingCell.swift in Sources */,
+				F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */,
+				F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */,
+				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
 				F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
 				F43F6CC021B5BB6B005E4683 /* needsContainer.swift in Sources */,
 				F4AB234A21B3DAD300E027BB /* StoriesTableViewController.swift in Sources */,
 				F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */,
 				F424E8C621B1EC820010B2F6 /* Injectable.swift in Sources */,
-				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
