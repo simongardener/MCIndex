@@ -15,8 +15,6 @@
 		F4165B0C21B976E2005CCDF0 /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */; };
 		F4165B0D21B976E2005CCDF0 /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */; };
 		F4165B0E21B976E2005CCDF0 /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */; };
-		F4217BE221B69DF100F63601 /* FoldingVolumesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BE021B69DF100F63601 /* FoldingVolumesTableView.swift */; };
-		F4217BE321B69DF100F63601 /* FoldingVolumesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BE021B69DF100F63601 /* FoldingVolumesTableView.swift */; };
 		F4217BE821B69FCC00F63601 /* VolumeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401903E21B698C100754C77 /* VolumeDetailTableViewController.swift */; };
 		F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BE921B6A46000F63601 /* PublishedCell.swift */; };
 		F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */; };
@@ -44,9 +42,6 @@
 		F43F6CCB21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
-		F47CD15D21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
-		F47CD15E21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
-		F47CD15F21B563D600854421 /* VolumeFoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */; };
 		F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */; };
 		F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
@@ -86,7 +81,6 @@
 		F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
 		F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-wal"; sourceTree = "<group>"; };
 		F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
-		F4217BE021B69DF100F63601 /* FoldingVolumesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FoldingVolumesTableView.swift; path = "/Users/Simon/Library/Autosave Information/MCIndex/MCIndex/ViewControllers/FoldingVolumesTableView.swift"; sourceTree = "<absolute>"; };
 		F4217BE621B69E2800F63601 /* FoldingVolumesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingVolumesTableView.swift; sourceTree = "<group>"; };
 		F4217BE921B6A46000F63601 /* PublishedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedCell.swift; sourceTree = "<group>"; };
 		F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailCell.swift; sourceTree = "<group>"; };
@@ -109,7 +103,6 @@
 		F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesTableViewController.swift; sourceTree = "<group>"; };
 		F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
 		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeFoldingCell.swift; sourceTree = "<group>"; };
 		F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBySeriesCell.swift; sourceTree = "<group>"; };
 		F483356921B72858009F2C72 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -238,7 +231,6 @@
 		F43F6CC521B5BCA8005E4683 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F4217BE021B69DF100F63601 /* FoldingVolumesTableView.swift */,
 				F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */,
 				F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */,
 				F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */,
@@ -278,7 +270,6 @@
 		F47CD15721B5629B00854421 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F47CD15C21B563D600854421 /* VolumeFoldingCell.swift */,
 				F401903821B68F2100754C77 /* VolumeCell.swift */,
 				F4217BE921B6A46000F63601 /* PublishedCell.swift */,
 				F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */,
@@ -510,7 +501,6 @@
 				F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */,
 				F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */,
 				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
-				F47CD15D21B563D600854421 /* VolumeFoldingCell.swift in Sources */,
 				F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */,
 				F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */,
 				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
@@ -526,12 +516,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47CD15E21B563D600854421 /* VolumeFoldingCell.swift in Sources */,
 				F424E8BB21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
 				F43F6CC921B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */,
 				F43F6CCB21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */,
 				F424E8B321B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
-				F4217BE221B69DF100F63601 /* FoldingVolumesTableView.swift in Sources */,
 				F401904021B698C100754C77 /* VolumeDetailTableViewController.swift in Sources */,
 				F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */,
 				F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */,
@@ -544,12 +532,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47CD15F21B563D600854421 /* VolumeFoldingCell.swift in Sources */,
 				F424E8BC21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
 				F43F6CC821B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */,
 				F43F6CCA21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */,
 				F424E8B421B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
-				F4217BE321B69DF100F63601 /* FoldingVolumesTableView.swift in Sources */,
 				F401904121B698C100754C77 /* VolumeDetailTableViewController.swift in Sources */,
 				F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */,
 				F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */,
