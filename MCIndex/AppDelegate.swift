@@ -12,7 +12,7 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private let alreadyInstalled = "alreadyInstalled"
+    private let alreadyInstalled = "alreadyInstalledv2"
     var dataModel = DataModel()
     
     var window: UIWindow?

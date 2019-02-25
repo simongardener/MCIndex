@@ -65,9 +65,12 @@ class ArtDroidTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return frc.fetchedObjects?.count ?? 0
+        if isFiltering() {
+            return filtered.count
+        } else {
+            return frc.fetchedObjects?.count ?? 0
+        }
     }
-    
     
     fileprivate lazy var frc : NSFetchedResultsController<Artist> = {
         let artistFetch : NSFetchRequest<Artist> = Artist.fetchRequest()
