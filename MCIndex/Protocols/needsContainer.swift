@@ -13,3 +13,10 @@ protocol NeedsContainer  {
     var container: NSPersistentContainer! {get set}
     func assertDependencies()
 }
+
+extension NeedsContainer {
+    func assertDependencies() {
+        assert(container != nil, "Didnt get a container passed in.")
+    }
+
+}

@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class VolumesTableViewController: UITableViewController {
+class VolumesTableViewController: UITableViewController, NeedsContainer {
 
     var container: NSPersistentContainer!
     
@@ -67,9 +67,10 @@ class VolumesTableViewController: UITableViewController {
     }
 }
 
-extension VolumesTableViewController : NeedsContainer{
-    func assertDependencies() {
-        assert(container != nil, "Didnt get a container passed in.")
-    }
-}
+//extension VolumesTableViewController : NeedsContainer{
+//    func assertDependencies() {
+//        assert(container != nil, "Didnt get a container passed in.")
+//    }
+
+//}
 

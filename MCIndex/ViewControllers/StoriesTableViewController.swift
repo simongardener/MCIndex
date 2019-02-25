@@ -25,15 +25,6 @@ class StoriesTableViewController: UITableViewController {
         if stories.count > 12 {
             setupSearchController()
         }
-        //        searchController.searchResultsUpdater = self
-        //        searchController.hidesNavigationBarDuringPresentation = false
-        //       // searchController.obscuresBackgroundDuringPresentation = false
-        //        searchController.dimsBackgroundDuringPresentation = false
-        //        searchController.searchBar.placeholder = "Search Stories"
-        //        tableView.tableHeaderView = searchController.searchBar
-        //       // navigationItem.searchController = searchController
-        //        definesPresentationContext = true
-        
     }
     
     func setupSearchController() {

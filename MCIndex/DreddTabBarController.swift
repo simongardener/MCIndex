@@ -25,7 +25,7 @@ class DreddTabBarController: UITabBarController {
     }
 }
 extension DreddTabBarController : Injectable {
-    func inject(_ dm: DataModel) {
+    func inject(_ dm: T) {
         dataModel = dm
     }
     
