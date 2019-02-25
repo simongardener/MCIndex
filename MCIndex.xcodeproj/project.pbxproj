@@ -44,6 +44,7 @@
 		F443DC312220083100CE4CB2 /* StoriesByArtistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443DC302220083100CE4CB2 /* StoriesByArtistTableViewController.swift */; };
 		F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
+		F45ABDB12224AA6500E98C29 /* StoriesByWriterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */; };
 		F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */; };
 		F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
@@ -101,6 +102,7 @@
 		F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesTableViewController.swift; sourceTree = "<group>"; };
 		F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
 		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByWriterTableViewCell.swift; sourceTree = "<group>"; };
 		F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBySeriesCell.swift; sourceTree = "<group>"; };
 		F483356921B72858009F2C72 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */,
 				F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */,
 				F483356921B72858009F2C72 /* ArtistCell.swift */,
+				F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -398,6 +401,7 @@
 				F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */,
 				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
 				F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
+				F45ABDB12224AA6500E98C29 /* StoriesByWriterTableViewCell.swift in Sources */,
 				F443DC2F2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift in Sources */,
 				F43F6CC021B5BB6B005E4683 /* needsContainer.swift in Sources */,
 				F443DC312220083100CE4CB2 /* StoriesByArtistTableViewController.swift in Sources */,

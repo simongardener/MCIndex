@@ -71,6 +71,7 @@ class SeriesTableViewController: UITableViewController {
     }
 
     
+    
     fileprivate lazy var frc : NSFetchedResultsController<Story> = {
         let storyFetch : NSFetchRequest<Story> = Story.fetchRequest()
         let sortBySeries = NSSortDescriptor(key: #keyPath(Story.seriesName), ascending: true)

@@ -107,20 +107,17 @@ class ScriptDroidTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //        let storiesVC = segue.destination as! StoriesTableViewController
-        //
-        //        let indexPath = tableView.indexPathForSelectedRow!
-        //        if isFiltering() {
-        //            let stories = filtered[indexPath.section].objects as! [Story]
-        //            let name = filtered[indexPath.section].name
-        //            storiesVC.title = name
-        //            storiesVC.inject(stories)
-        //        }else {
-        //            let stories = frc.sections?[indexPath.section].objects as! [Story]
-        //            let name = frc.sections?[indexPath.section].name
-        //            storiesVC.title = name
-        //            storiesVC.inject(stories)
-        //        }
+        let vc =  segue.destination as! StoriesByWriterTableViewController
+        let indexPath = tableView.indexPathForSelectedRow!
+        var name : String
+        if isFiltering() {
+            name = filtered[indexPath.row].fullName!
+        }else {
+            name = frc.fetchedObjects![indexPath.row].fullName!
+        }
+        vc.droidName = name
+        vc.container = container
+ 
     }
     
 }
