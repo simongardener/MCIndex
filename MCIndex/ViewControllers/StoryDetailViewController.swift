@@ -23,7 +23,6 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var redBlock: UIView!
     var story:Story!
     
-    @IBOutlet weak var slab: UILabel!
     
  
     override func viewDidLoad() {
@@ -37,7 +36,6 @@ class StoryDetailViewController: UIViewController {
     }
  
     func populateLabels(){
-        slab.text = story.title
         storyLabel.text = story.title
         thrillLabel.text = story.seriesName
         sourceLabel.text = story.issuesRun
