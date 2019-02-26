@@ -19,8 +19,8 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var volumeLabel: UILabel!
     @IBOutlet weak var volumeNumberLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
-    
     @IBOutlet weak var colorLabelLabel: UILabel!
+    @IBOutlet weak var redBlock: UIView!
     var story:Story!
     
     
@@ -30,13 +30,11 @@ class StoryDetailViewController: UIViewController {
         title = "Story Details"
         assert(story != nil, "No story passed into StrotyDetails")
         populateLabels()
+        redBlock.roundCorners()
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func backButtonPresses(_ sender: Any) {
-        dismiss(animated: true)
-    }
+ 
     func populateLabels(){
         storyLabel.text = story.title
         thrillLabel.text = story.seriesName
