@@ -45,6 +45,7 @@
 		F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
 		F45ABDB12224AA6500E98C29 /* StoriesByWriterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */; };
+		F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */; };
 		F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */; };
 		F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
@@ -103,6 +104,7 @@
 		F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
 		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByWriterTableViewCell.swift; sourceTree = "<group>"; };
+		F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByDroidTableViewCell.swift; sourceTree = "<group>"; };
 		F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBySeriesCell.swift; sourceTree = "<group>"; };
 		F483356921B72858009F2C72 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */,
 				F483356921B72858009F2C72 /* ArtistCell.swift */,
 				F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */,
+				F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				F443DC2D2220080700CE4CB2 /* ScriptDroidTableViewController.swift in Sources */,
 				F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */,
 				F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */,
+				F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */,
 				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
 				F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */,
 				F443DC2B222007E400CE4CB2 /* ArtDroidTableViewController.swift in Sources */,

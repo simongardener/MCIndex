@@ -96,8 +96,6 @@ extension StoriesTableViewController : UISearchControllerDelegate {
 }
 extension StoriesTableViewController : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print("delegate got the message")
-        
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }

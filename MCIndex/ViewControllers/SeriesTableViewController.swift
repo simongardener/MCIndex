@@ -139,8 +139,6 @@ extension SeriesTableViewController : UISearchControllerDelegate {
 
 extension SeriesTableViewController : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print("delegate got the message")
-        
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }

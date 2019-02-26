@@ -77,6 +77,8 @@ class ScriptDroidTableViewController: UITableViewController {
         let writerFetch : NSFetchRequest<Writer> = Writer.fetchRequest()
         let sortByName = NSSortDescriptor(key: #keyPath(Writer.fullName), ascending: true)
         writerFetch.sortDescriptors = [sortByName]
+        let predicate = NSPredicate(format: "stories.@count > %d", 0)
+        writerFetch.predicate = predicate
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: writerFetch, managedObjectContext: container.viewContext, sectionNameKeyPath:nil, cacheName: nil)
         return fetchedResultsController
     }()
@@ -130,8 +132,6 @@ extension ScriptDroidTableViewController : UISearchControllerDelegate {
 
 extension ScriptDroidTableViewController  : UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        print("delegate got the message")
-        
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }

@@ -76,6 +76,8 @@ class ArtDroidTableViewController: UITableViewController {
         let artistFetch : NSFetchRequest<Artist> = Artist.fetchRequest()
         let sortByName = NSSortDescriptor(key: #keyPath(Artist.fullName), ascending: true)
         artistFetch.sortDescriptors = [sortByName]
+        let predicate = NSPredicate(format: "stories.@count > %d", 0)
+        artistFetch.predicate = predicate
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: artistFetch, managedObjectContext: container.viewContext, sectionNameKeyPath:nil, cacheName: nil)
         return fetchedResultsController
     }()
@@ -106,20 +108,17 @@ class ArtDroidTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        let storiesVC = segue.destination as! StoriesTableViewController
-//
-//        let indexPath = tableView.indexPathForSelectedRow!
-//        if isFiltering() {
-//            let stories = filtered[indexPath.section].objects as! [Story]
-//            let name = filtered[indexPath.section].name
-//            storiesVC.title = name
-//            storiesVC.inject(stories)
-//        }else {
-//            let stories = frc.sections?[indexPath.section].objects as! [Story]
-//            let name = frc.sections?[indexPath.section].name
-//            storiesVC.title = name
-//            storiesVC.inject(stories)
-//        }
+        let vc =  segue.destination as! StoriesByArtistTableViewController
+        let indexPath = tableView.indexPathForSelectedRow!
+        var name : String
+        if isFiltering() {
+            name = filtered[indexPath.row].fullName!
+        }else {
+            name = frc.fetchedObjects![indexPath.row].fullName!
+        }
+        vc.droidName = name
+        vc.container = container
+        
     }
     
 }
@@ -136,9 +135,7 @@ extension ArtDroidTableViewController : UISearchControllerDelegate {
 }
 
 extension ArtDroidTableViewController  : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        print("delegate got the message")
-        
+    func updateSearchResults(for searchController: UISearchController) {        
         filterContentForSearchText(searchController.searchBar.text!)
     }
 }
