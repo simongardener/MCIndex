@@ -20,11 +20,6 @@ class StoriesByWriterTableViewController: UITableViewController {
         title = droidName
         fetchStories()
        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     fileprivate lazy var frc : NSFetchedResultsController<Story> = {
@@ -70,27 +65,23 @@ class StoriesByWriterTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let sections = frc.sections else { fatalError("No sections in frc")}
+      //  guard let sections = frc.sections else { fatalError("No sections in frc")}
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! StoriesByDroidTableViewCell
-        let secInfo = sections[indexPath.section]
-        let story = secInfo.objects?[indexPath.row] as! Story
+       // let secInfo = sections[indexPath.section]
+       // let story = secInfo.objects?[indexPath.row] as! Story
+        let story = frc.object(at: indexPath)
         cell.configure(with: story)
         return cell
     }
 
 
   
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let vc = segue.destination as! StoryDetailViewController
+        let indexPath = tableView.indexPathForSelectedRow!
+        vc.story = frc.object(at: indexPath)
     }
-    */
-
 }
 extension StoriesByWriterTableViewController : NeedsContainer {
     func assertDependencies() {

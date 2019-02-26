@@ -10,13 +10,13 @@
         <attribute name="firstNames" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="colorist" inverseEntity="Story" syncable="YES"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="colorists" inverseEntity="Story" syncable="YES"/>
     </entity>
     <entity name="Letterer" representedClassName="Letterer" syncable="YES" codeGenerationType="class">
         <attribute name="firstNames" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="letterer" inverseEntity="Story" syncable="YES"/>
+        <relationship name="stories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Story" inverseName="letterers" inverseEntity="Story" syncable="YES"/>
     </entity>
     <entity name="Story" representedClassName="Story" syncable="YES" codeGenerationType="class">
         <attribute name="inVolume" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -28,8 +28,8 @@
         <attribute name="seriesName" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" spotlightIndexingEnabled="YES" syncable="YES"/>
         <relationship name="artists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Artist" inverseName="stories" inverseEntity="Artist" syncable="YES"/>
-        <relationship name="colorist" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Colorist" inverseName="stories" inverseEntity="Colorist" syncable="YES"/>
-        <relationship name="letterer" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Letterer" inverseName="stories" inverseEntity="Letterer" syncable="YES"/>
+        <relationship name="colorists" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Colorist" inverseName="stories" inverseEntity="Colorist" syncable="YES"/>
+        <relationship name="letterers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Letterer" inverseName="stories" inverseEntity="Letterer" syncable="YES"/>
         <relationship name="volume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Volume" inverseName="stories" inverseEntity="Volume" syncable="YES"/>
         <relationship name="writers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Writer" inverseName="stories" inverseEntity="Writer" syncable="YES"/>
     </entity>
@@ -52,7 +52,7 @@
         <element name="Artist" positionX="-137.9296875" positionY="-236.703125" width="128" height="103"/>
         <element name="Colorist" positionX="-104.98828125" positionY="-151.34375" width="128" height="103"/>
         <element name="Letterer" positionX="-103.06640625" positionY="-82.5078125" width="128" height="103"/>
-        <element name="Story" positionX="-293.96484375" positionY="-203.1171875" width="128" height="30"/>
+        <element name="Story" positionX="-293.96484375" positionY="-203.1171875" width="128" height="240"/>
         <element name="Volume" positionX="-505.6015625" positionY="-141.46484375" width="128" height="150"/>
         <element name="Writer" positionX="-125.10546875" positionY="10.265625" width="128" height="103"/>
     </elements>

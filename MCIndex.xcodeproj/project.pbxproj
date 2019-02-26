@@ -32,8 +32,6 @@
 		F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
 		F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
 		F43F6CC021B5BB6B005E4683 /* needsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F6CBF21B5BB6B005E4683 /* needsContainer.swift */; };
-		F43F6CC621B5BCB6005E4683 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */; };
-		F43F6CC721B5BCB6005E4683 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */; };
 		F43F6CC821B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F43F6CC921B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F43F6CCA21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
@@ -46,11 +44,12 @@
 		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
 		F45ABDB12224AA6500E98C29 /* StoriesByWriterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */; };
 		F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */; };
+		F45ABDB52225456400E98C29 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */; };
 		F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */; };
 		F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F483356D21B72C6A009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
-		F4AB234A21B3DAD300E027BB /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */; };
+		F493EF9422258E9B00851647 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493EF9322258E9B00851647 /* StoriesTableViewController.swift */; };
 		F4B3F5C121B8814900992DCA /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,9 +104,10 @@
 		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByWriterTableViewCell.swift; sourceTree = "<group>"; };
 		F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByDroidTableViewCell.swift; sourceTree = "<group>"; };
+		F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
 		F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBySeriesCell.swift; sourceTree = "<group>"; };
 		F483356921B72858009F2C72 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
-		F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
+		F493EF9322258E9B00851647 /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,12 +204,13 @@
 			children = (
 				F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */,
 				F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */,
-				F4AB234921B3DAD300E027BB /* StoriesTableViewController.swift */,
 				F401903E21B698C100754C77 /* VolumeDetailTableViewController.swift */,
 				F443DC2A222007E400CE4CB2 /* ArtDroidTableViewController.swift */,
 				F443DC2C2220080700CE4CB2 /* ScriptDroidTableViewController.swift */,
 				F443DC2E2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift */,
 				F443DC302220083100CE4CB2 /* StoriesByArtistTableViewController.swift */,
+				F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */,
+				F493EF9322258E9B00851647 /* StoriesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -402,14 +403,15 @@
 				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
 				F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */,
 				F443DC2B222007E400CE4CB2 /* ArtDroidTableViewController.swift in Sources */,
+				F45ABDB52225456400E98C29 /* StoryDetailViewController.swift in Sources */,
 				F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */,
 				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
 				F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
 				F45ABDB12224AA6500E98C29 /* StoriesByWriterTableViewCell.swift in Sources */,
+				F493EF9422258E9B00851647 /* StoriesTableViewController.swift in Sources */,
 				F443DC2F2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift in Sources */,
 				F43F6CC021B5BB6B005E4683 /* needsContainer.swift in Sources */,
 				F443DC312220083100CE4CB2 /* StoriesByArtistTableViewController.swift in Sources */,
-				F4AB234A21B3DAD300E027BB /* StoriesTableViewController.swift in Sources */,
 				F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */,
 				F424E8C621B1EC820010B2F6 /* Injectable.swift in Sources */,
 			);
@@ -426,7 +428,6 @@
 				F401904021B698C100754C77 /* VolumeDetailTableViewController.swift in Sources */,
 				F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */,
 				F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */,
-				F43F6CC721B5BCB6005E4683 /* StoriesTableViewController.swift in Sources */,
 				F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,7 +443,6 @@
 				F401904121B698C100754C77 /* VolumeDetailTableViewController.swift in Sources */,
 				F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */,
 				F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */,
-				F43F6CC621B5BCB6005E4683 /* StoriesTableViewController.swift in Sources */,
 				F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

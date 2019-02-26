@@ -2,9 +2,10 @@
 //  StoriesTableViewController.swift
 //  MCIndex
 //
-//  Created by Simon Gardener on 02/12/2018.
-//  Copyright © 2018 Simon Gardener. All rights reserved.
+//  Created by Simon Gardener on 26/02/2019.
+//  Copyright © 2019 Simon Gardener. All rights reserved.
 //
+
 
 import UIKit
 import CoreData
@@ -85,13 +86,13 @@ class StoriesTableViewController: UITableViewController {
     }
     
     fileprivate func hideSearchBar(yAxisOffset : Double){
-         self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
+        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
     }
 }
 
 extension StoriesTableViewController : UISearchControllerDelegate {
     func didDismissSearchController(_ searchController: UISearchController) {
-    hideSearchBar(yAxisOffset: cancelSearchBarOffset)
+        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
     }
 }
 extension StoriesTableViewController : UISearchResultsUpdating {
