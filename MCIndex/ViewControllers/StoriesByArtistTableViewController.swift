@@ -24,8 +24,7 @@ class StoriesByArtistTableViewController: UITableViewController {
         assertDependencies()
         title = droidName
         fetchStories()
-        guard let storyCount = frc.fetchedObjects?.count else { fatalError("Souldn't get a no stories situation if my database is correct")}
-        if storyCount > 12 {
+        if let storyCount = frc.fetchedObjects?.count, storyCount > 12 {
             setupSearchController()
         }
     }
@@ -120,12 +119,10 @@ class StoriesByArtistTableViewController: UITableViewController {
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let vc = segue.destination as? StoryDetailViewController else { fatalError("Not a StoryDetailVC")}
         guard let sections = frc.sections else { fatalError("No sections in frc")}
         guard let indexPath = tableView.indexPathForSelectedRow else{fatalError("no vlaid selected indexpath")}
-     //   guard let  story = sections[indexPath.section].objects?[indexPath.row] as? Story else {fatalError("No story object at indexpath")}
         let story: Story
         if isFiltering() {
             story = filtered[indexPath.row]
