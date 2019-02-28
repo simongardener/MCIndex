@@ -83,6 +83,7 @@
                                     <outlet property="source" destination="QVe-EV-OOv" id="S49-Hd-OmA"/>
                                     <outlet property="title" destination="aYs-HV-uth" id="kn6-TB-jpO"/>
                                     <outlet property="volumeNumber" destination="KYf-Db-5wf" id="FLb-RW-v2U"/>
+                                    <segue destination="lid-wQ-D6c" kind="show" id="5CT-8U-5TP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -818,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymp-cH-bk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2076" y="-723"/>
+            <point key="canvasLocation" x="2250" y="-683"/>
         </scene>
         <!--Volumes-->
         <scene sceneID="Of3-7N-Pgb">
@@ -902,6 +903,6 @@
         <image name="Thrill" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SEX-95-JcV"/>
+        <segue reference="5CT-8U-5TP"/>
     </inferredMetricsTieBreakers>
 </document>

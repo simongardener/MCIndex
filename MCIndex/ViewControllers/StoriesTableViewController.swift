@@ -88,6 +88,18 @@ class StoriesTableViewController: UITableViewController {
     fileprivate func hideSearchBar(yAxisOffset : Double){
         self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
     }
+    
+    // MARK:- Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? StoryDetailViewController else { fatalError("Didnt get a StoryDetailViewController")}
+        guard let indexPath = tableView.indexPathForSelectedRow else { fatalError("cant get this")}
+        if isFiltering() {
+            vc.story = filteredStories[indexPath.row]
+        }else {
+            vc.story = stories[indexPath.row]
+            
+        }
+    }
 }
 
 extension StoriesTableViewController : UISearchControllerDelegate {
