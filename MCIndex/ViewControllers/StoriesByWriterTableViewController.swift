@@ -75,8 +75,6 @@ class StoriesByWriterTableViewController: UITableViewController {
         return cell
     }
 
-
-  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! StoryDetailViewController
         let indexPath = tableView.indexPathForSelectedRow!

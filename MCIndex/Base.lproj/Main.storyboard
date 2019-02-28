@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="526" y="-922"/>
         </scene>
-        <!--Volume Detail Table View Controller-->
+        <!--Volume Details Table View Controller-->
         <scene sceneID="Yor-qG-EiG">
             <objects>
-                <tableViewController id="adE-Ng-agy" customClass="VolumeDetailTableViewController" customModule="MCIndex" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="adE-Ng-agy" customClass="VolumeDetailsTableViewController" customModule="MCIndex" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="LEe-7R-b8h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -402,6 +402,7 @@
                                     <outlet property="seriesName" destination="Wtm-Kr-OOu" id="EsB-Q3-tLD"/>
                                     <outlet property="source" destination="wLj-HJ-mYJ" id="OGB-40-xXB"/>
                                     <outlet property="title" destination="OKw-fV-LEk" id="2VK-9Q-hzA"/>
+                                    <segue destination="lid-wQ-D6c" kind="show" id="SEX-95-JcV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -817,7 +818,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymp-cH-bk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2205.5999999999999" y="726.38680659670172"/>
+            <point key="canvasLocation" x="2076" y="-723"/>
         </scene>
         <!--Volumes-->
         <scene sceneID="Of3-7N-Pgb">
@@ -901,6 +902,6 @@
         <image name="Thrill" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2nN-9V-y01"/>
+        <segue reference="SEX-95-JcV"/>
     </inferredMetricsTieBreakers>
 </document>

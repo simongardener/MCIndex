@@ -32,7 +32,7 @@ class DataModel {
     
     
      func installSeedModel (){
-        guard let sqlPath = Bundle.main.path(forResource: dBName, ofType: sqlType)else { fatalError("These is no presupplied seed database")}
+      //  guard let sqlPath = Bundle.main.path(forResource: dBName, ofType: sqlType)else { fatalError("These is no presupplied seed database")}
       
         guard let seedSqlURL = Bundle.main.url(forResource: dBName, withExtension: sqlType) else { fatalError("These is no presupplied seed database")}
         print("seedSQLURL\(seedSqlURL)")
