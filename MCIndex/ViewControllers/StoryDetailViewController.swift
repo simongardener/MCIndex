@@ -17,10 +17,9 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var colorDroidLabel: UILabel!
     @IBOutlet weak var scriptDroidLabel: UILabel!
     @IBOutlet weak var volumeLabel: UILabel!
-    @IBOutlet weak var volumeNumberLabel: UILabel!
     @IBOutlet weak var sourceLabel: UILabel!
     @IBOutlet weak var colorLabelLabel: UILabel!
-    @IBOutlet weak var redBlock: UIView!
+   
     var story:Story!
     
     
@@ -30,7 +29,6 @@ class StoryDetailViewController: UIViewController {
         title = "Story Details"
         assert(story != nil, "No story passed into StrotyDetails")
         populateLabels()
-        redBlock.roundCorners()
         
         // Do any additional setup after loading the view.
     }
@@ -40,8 +38,6 @@ class StoryDetailViewController: UIViewController {
         thrillLabel.text = story.seriesName
         sourceLabel.text = story.issuesRun
         volumeLabel.text = String(story.inVolume)
-        volumeNumberLabel.text = String(story.inVolume)
-        
         artDroidLabel.text = artDroids() ?? "unknown"
         scriptDroidLabel.text = scriptDroids() ?? "unknown"
         letterDroidLabel.text = letterDroids() ?? "unknown"
@@ -55,7 +51,10 @@ class StoryDetailViewController: UIViewController {
             colorDroidLabel.isHidden = true
         }
     }
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
     func artDroids()-> String? {
         guard let droids = story.artists as? Set<Artist> else {
             return nil
