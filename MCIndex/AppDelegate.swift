@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         installSeedModelIfNeeded()
         let controller = self.window?.rootViewController as! DreddTabBarController
         controller.inject(dataModel)
+
         return true
     }
 

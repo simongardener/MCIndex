@@ -50,6 +50,7 @@
 		F48C38E22228255900F62F5A /* VolumeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C38E12228255900F62F5A /* VolumeDetailsTableViewController.swift */; };
 		F493EF9422258E9B00851647 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493EF9322258E9B00851647 /* StoriesTableViewController.swift */; };
 		F4B3F5C121B8814900992DCA /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
+		F4C595CE2228A07000B38658 /* SearchingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C595CD2228A07000B38658 /* SearchingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		F483356921B72858009F2C72 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		F48C38E12228255900F62F5A /* VolumeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeDetailsTableViewController.swift; sourceTree = "<group>"; };
 		F493EF9322258E9B00851647 /* StoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewController.swift; sourceTree = "<group>"; };
+		F4C595CD2228A07000B38658 /* SearchingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */,
 				F493EF9322258E9B00851647 /* StoriesTableViewController.swift */,
 				F48C38E12228255900F62F5A /* VolumeDetailsTableViewController.swift */,
+				F4C595CD2228A07000B38658 /* SearchingTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */,
 				F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */,
 				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
+				F4C595CE2228A07000B38658 /* SearchingTableViewController.swift in Sources */,
 				F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */,
 				F443DC2B222007E400CE4CB2 /* ArtDroidTableViewController.swift in Sources */,
 				F45ABDB52225456400E98C29 /* StoryDetailViewController.swift in Sources */,

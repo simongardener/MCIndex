@@ -15,15 +15,22 @@ class VolumesTableViewController: UITableViewController {
     var filtered = [Volume]()
     var searchController = UISearchController(searchResultsController: nil)
     let initialSearchBarOffset = 56.0
-    let cancelSearchBarOffset = -8.0
+    var cancelSearchBarOffset = -8.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
         fetchVolumes()
+        cancelSearchBarOffset = -1 * (Double((navigationController?.navigationBar.frame.maxY)!) - initialSearchBarOffset)
         setupSearchController()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        searchController.dismiss(animated: false, completion: nil)
+        searchController.isActive = false
+        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
+    }
     func setupSearchController() {
         hideSearchBar(yAxisOffset: initialSearchBarOffset)
         definesPresentationContext = true
