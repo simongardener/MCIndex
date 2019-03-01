@@ -9,17 +9,24 @@
 import UIKit
 
 class SearchingTableViewController: UITableViewController {
-
+  
     var searchController = UISearchController(searchResultsController: nil)
     let initialSearchBarOffset = 56.0
-    let cancelSearchBarOffset = -8.0
-    
+    var cancelSearchBarOffset = -8.0
+    var headerHeight = 0.0
+    var navBarHeight = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSearchController()
-      
+        navBarHeight = Double((navigationController?.navigationBar.frame.maxY)!)
+        cancelSearchBarOffset = -1 * (navBarHeight - initialSearchBarOffset)
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        searchController.isActive = false
+        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
+    }
+   
     // MARK: search
     
     func setupSearchController() {
@@ -28,7 +35,7 @@ class SearchingTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
         searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
-        searchController.searchBar.placeholder = "Search by Artist"
+        searchController.searchBar.placeholder = "Search by ******"
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.delegate = self
         tableView.tableHeaderView = searchController.searchBar
@@ -45,27 +52,22 @@ class SearchingTableViewController: UITableViewController {
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
       fatalError("must override")
     }
-    fileprivate func hideSearchBar(yAxisOffset : Double){
+    func hideSearchBar(yAxisOffset : Double){
         self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
     }
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         fatalError("must override")
-        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         fatalError("must override")
-        return 0
     }
 
-   
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        fatalError("must override")
-
-        return UITableViewCell()
-        
+        fatalError("must override")        
     }
     
 }

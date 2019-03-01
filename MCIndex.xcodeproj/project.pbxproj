@@ -209,10 +209,10 @@
 				F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */,
 				F443DC2A222007E400CE4CB2 /* ArtDroidTableViewController.swift */,
 				F443DC2C2220080700CE4CB2 /* ScriptDroidTableViewController.swift */,
+				F493EF9322258E9B00851647 /* StoriesTableViewController.swift */,
 				F443DC2E2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift */,
 				F443DC302220083100CE4CB2 /* StoriesByArtistTableViewController.swift */,
 				F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */,
-				F493EF9322258E9B00851647 /* StoriesTableViewController.swift */,
 				F48C38E12228255900F62F5A /* VolumeDetailsTableViewController.swift */,
 				F4C595CD2228A07000B38658 /* SearchingTableViewController.swift */,
 			);

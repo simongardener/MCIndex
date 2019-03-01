@@ -21,9 +21,7 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var colorLabelLabel: UILabel!
    
     var story:Story!
-    
-    
- 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Story Details"
@@ -37,7 +35,7 @@ class StoryDetailViewController: UIViewController {
         storyLabel.text = story.title
         thrillLabel.text = story.seriesName
         sourceLabel.text = story.issuesRun
-        volumeLabel.text = String(story.inVolume)
+        volumeLabel.text = String(story.inVolume)+": "+(story.volume?.title)!
         artDroidLabel.text = artDroids() ?? "unknown"
         scriptDroidLabel.text = scriptDroids() ?? "unknown"
         letterDroidLabel.text = letterDroids() ?? "unknown"
@@ -84,6 +82,5 @@ class StoryDetailViewController: UIViewController {
         let droidNames = droids.map{$0.fullName!}
         return droidNames.joined(separator: "\n")
     }
-
 }
 

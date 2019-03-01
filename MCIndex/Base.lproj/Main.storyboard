@@ -765,7 +765,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="volume Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKc-sH-BAW">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="volume Label" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKc-sH-BAW">
                                         <rect key="frame" x="0.0" y="160" width="266.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -819,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymp-cH-bk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250" y="-683"/>
+            <point key="canvasLocation" x="2327" y="196"/>
         </scene>
         <!--Volumes-->
         <scene sceneID="Of3-7N-Pgb">
@@ -903,6 +903,6 @@
         <image name="Thrill" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="SEX-95-JcV"/>
+        <segue reference="RBp-DN-Fos"/>
     </inferredMetricsTieBreakers>
 </document>

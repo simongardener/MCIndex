@@ -9,56 +9,29 @@
 import UIKit
 import CoreData
 
-class SeriesTableViewController: UITableViewController {
+class SeriesTableViewController: SearchingTableViewController {
 
     var container : NSPersistentContainer!
     var filtered = [NSFetchedResultsSectionInfo]()
-    var searchController = UISearchController(searchResultsController: nil)
-    let initialSearchBarOffset = 56.0
-    let cancelSearchBarOffset = -8.0
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loading series view")
         assertDependencies()
         fetchStories()
         setupSearchController()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-       
-    }
    
-    func setupSearchController() {
-        hideSearchBar(yAxisOffset: initialSearchBarOffset)
-        definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchResultsUpdater = self
+ override func setupSearchController() {
+        super.setupSearchController()
         searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
-        searchController.searchBar.placeholder = "Search by Series"
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
     }
-    //filtering methods
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+  
+  override func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filtered = frc.sections!.filter { $0.name.lowercased().contains(searchText.lowercased())}
         tableView.reloadData()
     }
-    fileprivate func hideSearchBar(yAxisOffset : Double){
-        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
-    }
-    // MARK: - Table view data source
 
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         if isFiltering() {
             return filtered.count
@@ -70,8 +43,6 @@ class SeriesTableViewController: UITableViewController {
         return 1
     }
 
-    
-    
     fileprivate lazy var frc : NSFetchedResultsController<Story> = {
         let storyFetch : NSFetchRequest<Story> = Story.fetchRequest()
         let sortBySeries = NSSortDescriptor(key: #keyPath(Story.seriesName), ascending: true)
@@ -103,13 +74,11 @@ class SeriesTableViewController: UITableViewController {
         return cell
     }
 
-    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let storiesVC = segue.destination as! StoriesTableViewController
-        
         let indexPath = tableView.indexPathForSelectedRow!
         if isFiltering() {
             let stories = filtered[indexPath.section].objects as! [Story]
@@ -123,22 +92,10 @@ class SeriesTableViewController: UITableViewController {
             storiesVC.inject(stories)
         }
     }
-
 }
 
 extension SeriesTableViewController : NeedsContainer{
     func assertDependencies() {
         assert(container != nil, "Didnt get a container passed in.")
-    }
-}
-extension SeriesTableViewController : UISearchControllerDelegate {
-    func didDismissSearchController(_ searchController: UISearchController) {
-        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
-    }
-}
-
-extension SeriesTableViewController : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
     }
 }

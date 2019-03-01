@@ -8,57 +8,31 @@
 
 import UIKit
 import CoreData
-class ScriptDroidTableViewController: UITableViewController {
+
+class ScriptDroidTableViewController:SearchingTableViewController {
     
     var container : NSPersistentContainer!
     var filtered = [Writer]()
-    var searchController = UISearchController(searchResultsController: nil)
-    let initialSearchBarOffset = 56.0
-    let cancelSearchBarOffset = -8.0
-    
     let cellId = "ScriptDroidCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("loading script Droid view")
         assertDependencies()
         fetchStories()
         setupSearchController()
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
     
-    func setupSearchController() {
-        hideSearchBar(yAxisOffset: initialSearchBarOffset)
-        definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
+    override func setupSearchController() {
+        super.setupSearchController()
         searchController.searchBar.placeholder = "Search by writer"
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
-    }
-    //filtering methods
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+    override func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filtered = (frc.fetchedObjects?.filter { $0.fullName!.lowercased().contains(searchText.lowercased())})!
         tableView.reloadData()
     }
-    fileprivate func hideSearchBar(yAxisOffset : Double){
-        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
-    }
-    // MARK: - Table view data source
     
+    // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return  1
     }
@@ -69,9 +43,7 @@ class ScriptDroidTableViewController: UITableViewController {
         } else {
             return frc.fetchedObjects?.count ?? 0
         }
-
     }
-    
     
     fileprivate lazy var frc : NSFetchedResultsController<Writer> = {
         let writerFetch : NSFetchRequest<Writer> = Writer.fetchRequest()
@@ -103,8 +75,6 @@ class ScriptDroidTableViewController: UITableViewController {
         }
         return cell
     }
-    
-    
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -119,22 +89,9 @@ class ScriptDroidTableViewController: UITableViewController {
         }
         vc.droidName = name
         vc.container = container
- 
-    }
-    
-}
-
-extension ScriptDroidTableViewController : UISearchControllerDelegate {
-    func didDismissSearchController(_ searchController: UISearchController) {
-        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
     }
 }
 
-extension ScriptDroidTableViewController  : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-}
 extension ScriptDroidTableViewController : NeedsContainer{
     func assertDependencies() {
         assert(container != nil, "Didnt get a container passed in.")

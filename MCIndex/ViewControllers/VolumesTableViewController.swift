@@ -9,54 +9,25 @@
 import UIKit
 import CoreData
 
-class VolumesTableViewController: UITableViewController {
+class VolumesTableViewController: SearchingTableViewController {
     
     var container: NSPersistentContainer!
     var filtered = [Volume]()
-    var searchController = UISearchController(searchResultsController: nil)
-    let initialSearchBarOffset = 56.0
-    var cancelSearchBarOffset = -8.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
         fetchVolumes()
-        cancelSearchBarOffset = -1 * (Double((navigationController?.navigationBar.frame.maxY)!) - initialSearchBarOffset)
         setupSearchController()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        searchController.dismiss(animated: false, completion: nil)
-        searchController.isActive = false
-        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
-    }
-    func setupSearchController() {
-        hideSearchBar(yAxisOffset: initialSearchBarOffset)
-        definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
-        searchController.searchBar.placeholder = "Search by volume name"
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
-    }
-    //filtering methods
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+    override func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filtered = (frc.fetchedObjects?.filter { $0.title!.lowercased().contains(searchText.lowercased())})!
         tableView.reloadData()
     }
-    fileprivate func hideSearchBar(yAxisOffset : Double){
-        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
+    override func setupSearchController() {
+        super.setupSearchController()
+         searchController.searchBar.placeholder = "filter by volume name"
     }
     // MARK: - Table view data source
     
@@ -93,14 +64,7 @@ class VolumesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VolumeCell", for: indexPath) as! VolumeCell
-        let volume : Volume
-        if isFiltering() {
-            volume =  filtered[indexPath.row]
-        }else {
-            volume = frc.object(at: indexPath)
-        }
-        cell.configure(with: volume)
-        
+        cell.configure(with: volume(at: indexPath))
         return cell
     }
     
@@ -108,13 +72,14 @@ class VolumesTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else { fatalError()}
         tableView.deselectRow(at: indexPath, animated: true)
         guard let view = segue.destination as? VolumeDetailsTableViewController else {fatalError("wrong kind of viewController")}
-        let volume : Volume
-        if isFiltering() {
-            volume = filtered[indexPath.row]
-        } else {
-            volume = frc.object(at: indexPath)
+        view.inject(volume(at: indexPath))
+    }
+    func volume(at indexPath: IndexPath)-> Volume{
+        if isFiltering(){
+            return filtered[indexPath.row]
+        }else {
+            return frc.object(at: indexPath)
         }
-        view.inject(volume)
     }
 }
 
@@ -124,14 +89,3 @@ extension VolumesTableViewController : NeedsContainer{
     }
 }
 
-extension VolumesTableViewController : UISearchControllerDelegate {
-    func didDismissSearchController(_ searchController: UISearchController) {
-        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
-    }
-}
-
-extension VolumesTableViewController  : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-}

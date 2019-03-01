@@ -8,16 +8,13 @@
 
 import UIKit
 import CoreData
-class StoriesByWriterTableViewController: UITableViewController {
 
+class StoriesByWriterTableViewController: SearchingTableViewController{
+    
     var container : NSPersistentContainer!
     var droidName : String!
     let cellID = "StoriesByWriter"
-    
     var filtered = [Story]()
-    var searchController = UISearchController(searchResultsController: nil)
-    let initialSearchBarOffset = 56.0
-    let cancelSearchBarOffset = -8.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,33 +25,17 @@ class StoriesByWriterTableViewController: UITableViewController {
             setupSearchController()
         }
     }
-    func setupSearchController() {
-        hideSearchBar(yAxisOffset: initialSearchBarOffset)
-        definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
+    
+    override func setupSearchController() {
+        super.setupSearchController()
         searchController.searchBar.placeholder = "search by title"
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
-    }
-    //filtering methods
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
     }
     
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+    override func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filtered = (frc.fetchedObjects?.filter { $0.title!.lowercased().contains(searchText.lowercased())})!
         tableView.reloadData()
     }
-    fileprivate func hideSearchBar(yAxisOffset : Double){
-        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
-    }
+    
     fileprivate lazy var frc : NSFetchedResultsController<Story> = {
         let storyFetch : NSFetchRequest<Story> = Story.fetchRequest()
         var path = "writers.fullName"
@@ -73,7 +54,6 @@ class StoriesByWriterTableViewController: UITableViewController {
         }catch{
             print("Unable to fetch artist")
             print("\(error), \(error.localizedDescription)")
-            
         }
     }
     
@@ -86,7 +66,7 @@ class StoriesByWriterTableViewController: UITableViewController {
             return frc.sections?.count ?? 0
         }
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering(){
             return filtered.count
@@ -119,10 +99,11 @@ class StoriesByWriterTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! StoryDetailViewController
         let indexPath = tableView.indexPathForSelectedRow!
+        
         if isFiltering(){
             vc.story = filtered[indexPath.row]
         }else {
-        vc.story = frc.object(at: indexPath)
+            vc.story = frc.object(at: indexPath)
         }
     }
 }
@@ -130,16 +111,5 @@ extension StoriesByWriterTableViewController : NeedsContainer {
     func assertDependencies() {
         assert(container != nil, "Didnt get a container passed in.")
         assert(droidName != nil, " Didnt geta droid name passed in")
-    }
-}
-extension StoriesByWriterTableViewController : UISearchControllerDelegate {
-    func didDismissSearchController(_ searchController: UISearchController) {
-        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
-    }
-}
-
-extension StoriesByWriterTableViewController  : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
     }
 }

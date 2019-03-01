@@ -9,15 +9,15 @@
 import UIKit
 import CoreData
 
-class StoriesByArtistTableViewController: UITableViewController {
+class StoriesByArtistTableViewController:SearchingTableViewController {
     var container : NSPersistentContainer!
     var droidName : String!
     let cellID = "StoriesByArtist"
     
     var filtered = [Story]()
-    var searchController = UISearchController(searchResultsController: nil)
-    let initialSearchBarOffset = 56.0
-    let cancelSearchBarOffset = -8.0
+//    var searchController = UISearchController(searchResultsController: nil)
+//    let initialSearchBarOffset = 56.0
+//    let cancelSearchBarOffset = -8.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,33 +28,34 @@ class StoriesByArtistTableViewController: UITableViewController {
             setupSearchController()
         }
     }
-    func setupSearchController() {
-        hideSearchBar(yAxisOffset: initialSearchBarOffset)
-        definesPresentationContext = true
-        searchController.dimsBackgroundDuringPresentation = false
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
+    override func setupSearchController() {
+        super.setupSearchController()
+//        hideSearchBar(yAxisOffset: initialSearchBarOffset)
+//        definesPresentationContext = true
+//        searchController.dimsBackgroundDuringPresentation = false
+//        searchController.searchResultsUpdater = self
+//        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
         searchController.searchBar.placeholder = "search by title"
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.delegate = self
-        tableView.tableHeaderView = searchController.searchBar
+//        searchController.hidesNavigationBarDuringPresentation = false
+//        searchController.delegate = self
+//        tableView.tableHeaderView = searchController.searchBar
     }
     //filtering methods
-    func isFiltering() -> Bool {
-        return searchController.isActive && !searchBarIsEmpty()
-    }
-    func searchBarIsEmpty() -> Bool {
-        // Returns true if the text is empty or nil
-        return searchController.searchBar.text?.isEmpty ?? true
-    }
-    
-    func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+//    func isFiltering() -> Bool {
+//        return searchController.isActive && !searchBarIsEmpty()
+//    }
+//    func searchBarIsEmpty() -> Bool {
+//        // Returns true if the text is empty or nil
+//        return searchController.searchBar.text?.isEmpty ?? true
+//    }
+//
+    override func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filtered = (frc.fetchedObjects?.filter { $0.title!.lowercased().contains(searchText.lowercased())})!
         tableView.reloadData()
     }
-    fileprivate func hideSearchBar(yAxisOffset : Double){
-        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
-    }
+//    fileprivate func hideSearchBar(yAxisOffset : Double){
+//        self.tableView.contentOffset = CGPoint(x:0.0, y:yAxisOffset)
+//    }
     fileprivate lazy var frc : NSFetchedResultsController<Story> = {
         let storyFetch : NSFetchRequest<Story> = Story.fetchRequest()
         var path = "artists.fullName"
@@ -139,14 +140,14 @@ extension StoriesByArtistTableViewController : NeedsContainer {
     }
     
 }
-extension StoriesByArtistTableViewController : UISearchControllerDelegate {
-    func didDismissSearchController(_ searchController: UISearchController) {
-        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
-    }
-}
-
-extension StoriesByArtistTableViewController  : UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        filterContentForSearchText(searchController.searchBar.text!)
-    }
-}
+//extension StoriesByArtistTableViewController : UISearchControllerDelegate {
+//    func didDismissSearchController(_ searchController: UISearchController) {
+//        hideSearchBar(yAxisOffset: cancelSearchBarOffset)
+//    }
+//}
+//
+//extension StoriesByArtistTableViewController  : UISearchResultsUpdating {
+//    func updateSearchResults(for searchController: UISearchController) {
+//        filterContentForSearchText(searchController.searchBar.text!)
+//    }
+//}
