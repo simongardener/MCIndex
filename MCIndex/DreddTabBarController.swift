@@ -21,6 +21,7 @@ class DreddTabBarController: UITabBarController {
             }
             //        }
         }
+        selectedIndex = 3
         
     }
 }

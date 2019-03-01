@@ -30,7 +30,6 @@ class StoriesTableViewController: SearchingTableViewController {
     }
     
     override  func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        print(" infilterCOntentforsearchText")
         filteredStories = stories.filter({(story: Story) -> Bool in
             let title = story.title!.isEmpty == false ?  story.title! : story.seriesName!
             return title.lowercased().contains(searchText.lowercased())

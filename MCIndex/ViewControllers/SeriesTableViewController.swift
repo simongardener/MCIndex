@@ -23,7 +23,7 @@ class SeriesTableViewController: SearchingTableViewController {
    
  override func setupSearchController() {
         super.setupSearchController()
-        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
+    searchController.searchBar.placeholder = "filter thrills"
     }
   
   override func filterContentForSearchText(_ searchText: String, scope: String = "All") {
