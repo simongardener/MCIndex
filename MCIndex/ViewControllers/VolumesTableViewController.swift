@@ -27,7 +27,7 @@ class VolumesTableViewController: SearchingTableViewController {
     }
     override func setupSearchController() {
         super.setupSearchController()
-         searchController.searchBar.placeholder = "filter by volume name"
+         searchController.searchBar.placeholder = "filter volume names"
     }
     // MARK: - Table view data source
     

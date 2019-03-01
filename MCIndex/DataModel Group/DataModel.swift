@@ -11,14 +11,14 @@ import CoreData
 
 class DataModel {
     
-    private let dBName = "DreddIndex"
+    private let dBName = "DreddIndex2"
     private let sqlType = "sqlite"
  
     
     
     lazy var container: NSPersistentContainer = {
        
-        let persistentContainer = NSPersistentContainer(name: "DreddIndex")
+        let persistentContainer = NSPersistentContainer(name: "DreddIndex2")
        
         persistentContainer.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -32,8 +32,6 @@ class DataModel {
     
     
      func installSeedModel (){
-      //  guard let sqlPath = Bundle.main.path(forResource: dBName, ofType: sqlType)else { fatalError("These is no presupplied seed database")}
-      
         guard let seedSqlURL = Bundle.main.url(forResource: dBName, withExtension: sqlType) else { fatalError("These is no presupplied seed database")}
         print("seedSQLURL\(seedSqlURL)")
         let psc = container.persistentStoreCoordinator

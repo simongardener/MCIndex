@@ -25,7 +25,7 @@ class ArtDroidTableViewController: SearchingTableViewController{
 
    override func setupSearchController() {
         super.setupSearchController()
-       searchController.searchBar.placeholder = "Search by Artist"
+       searchController.searchBar.placeholder = "filter artist names"
     }
    
    override func filterContentForSearchText(_ searchText: String, scope: String = "All") {

@@ -35,7 +35,7 @@ class StoriesByArtistTableViewController:SearchingTableViewController {
 //        searchController.dimsBackgroundDuringPresentation = false
 //        searchController.searchResultsUpdater = self
 //        searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
-        searchController.searchBar.placeholder = "search by title"
+        searchController.searchBar.placeholder = "filter story title"
 //        searchController.hidesNavigationBarDuringPresentation = false
 //        searchController.delegate = self
 //        tableView.tableHeaderView = searchController.searchBar

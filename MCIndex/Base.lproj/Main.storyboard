@@ -110,9 +110,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="iqD-DJ-N1z" kind="relationship" relationship="viewControllers" id="Uqh-V7-jPI"/>
-                        <segue destination="zIK-YD-Jfb" kind="relationship" relationship="viewControllers" id="tMA-7n-xaO"/>
-                        <segue destination="9Xz-Ou-A2k" kind="relationship" relationship="viewControllers" id="3sC-m0-WSg"/>
                         <segue destination="W66-Yd-lgt" kind="relationship" relationship="viewControllers" id="3Cs-bY-giD"/>
+                        <segue destination="9Xz-Ou-A2k" kind="relationship" relationship="viewControllers" id="3sC-m0-WSg"/>
+                        <segue destination="zIK-YD-Jfb" kind="relationship" relationship="viewControllers" id="tMA-7n-xaO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eXa-8D-Tac" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,7 +189,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WqM-Ui-uxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="526" y="-922"/>
+            <point key="canvasLocation" x="524" y="-910"/>
         </scene>
         <!--Volume Details Table View Controller-->
         <scene sceneID="Yor-qG-EiG">
@@ -415,7 +415,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAB-af-Tdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1272.8" y="-922.48875562218893"/>
+            <point key="canvasLocation" x="1270" y="-911"/>
         </scene>
         <!--Series-->
         <scene sceneID="N7o-jG-hrQ">
@@ -458,7 +458,7 @@
             </objects>
             <point key="canvasLocation" x="525" y="-224"/>
         </scene>
-        <!--Art Droid-->
+        <!--Art Droids-->
         <scene sceneID="r0e-HC-qbV">
             <objects>
                 <tableViewController id="9Fq-Dt-1Rx" customClass="ArtDroidTableViewController" customModule="MCIndex" customModuleProvider="target" sceneMemberID="viewController">
@@ -493,11 +493,11 @@
                             <outlet property="delegate" destination="9Fq-Dt-1Rx" id="KJO-M0-KG0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Art Droid" id="wnu-tT-C4U"/>
+                    <navigationItem key="navigationItem" title="Art Droids" id="wnu-tT-C4U"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U16-hf-yA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="450"/>
+            <point key="canvasLocation" x="524" y="449"/>
         </scene>
         <!--Script Droids-->
         <scene sceneID="7Ud-zm-IFC">
@@ -538,7 +538,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rgU-5j-Qda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="1117"/>
+            <point key="canvasLocation" x="524" y="1117"/>
         </scene>
         <!--Script Droid-->
         <scene sceneID="o8R-gW-pFS">
@@ -606,7 +606,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R3H-ap-NRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="1117"/>
+            <point key="canvasLocation" x="1271" y="1117"/>
         </scene>
         <!--Art Droid-->
         <scene sceneID="geI-Qh-WJI">
@@ -674,7 +674,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QU5-tR-E1l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1375" y="450"/>
+            <point key="canvasLocation" x="1271" y="449"/>
         </scene>
         <!--Story Detail View Controller-->
         <scene sceneID="LZv-0n-j5P">
@@ -819,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymp-cH-bk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2327" y="196"/>
+            <point key="canvasLocation" x="2444" y="114"/>
         </scene>
         <!--Volumes-->
         <scene sceneID="Of3-7N-Pgb">
@@ -838,7 +838,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyY-K8-Pgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="-922.48875562218893"/>
+            <point key="canvasLocation" x="-276" y="-909"/>
         </scene>
         <!--Thrills-->
         <scene sceneID="Zck-KJ-4xm">
@@ -863,7 +863,7 @@
         <scene sceneID="ZT1-Hg-rY5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Xz-Ou-A2k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Art Droid" id="DjW-rd-tSa"/>
+                    <tabBarItem key="tabBarItem" title="Art Droid" image="JDMC A" id="DjW-rd-tSa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oVN-Fd-0lo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -882,7 +882,7 @@
         <scene sceneID="jfu-O7-UbL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W66-Yd-lgt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Script Droid" id="AUD-m6-lJj"/>
+                    <tabBarItem key="tabBarItem" title="Script Droid" image="JDMC S" id="AUD-m6-lJj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bZZ-mb-HKM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -895,14 +895,16 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJz-aD-ui2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-275" y="1117"/>
+            <point key="canvasLocation" x="-666" y="1117"/>
         </scene>
     </scenes>
     <resources>
         <image name="90Block50" width="50" height="50"/>
+        <image name="JDMC A" width="50" height="50"/>
+        <image name="JDMC S" width="50" height="50"/>
         <image name="Thrill" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="RBp-DN-Fos"/>
+        <segue reference="SEX-95-JcV"/>
     </inferredMetricsTieBreakers>
 </document>

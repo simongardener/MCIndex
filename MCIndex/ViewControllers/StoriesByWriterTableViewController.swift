@@ -28,7 +28,7 @@ class StoriesByWriterTableViewController: SearchingTableViewController{
     
     override func setupSearchController() {
         super.setupSearchController()
-        searchController.searchBar.placeholder = "search by title"
+        searchController.searchBar.placeholder = "filter story title"
     }
     
     override func filterContentForSearchText(_ searchText: String, scope: String = "All") {

@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		F401903921B68F2100754C77 /* VolumeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401903821B68F2100754C77 /* VolumeCell.swift */; };
 		F403272722259FE300A11DB0 /* ExtUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F403272622259FE300A11DB0 /* ExtUIView.swift */; };
-		F4165B0C21B976E2005CCDF0 /* DreddIndex.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */; };
-		F4165B0D21B976E2005CCDF0 /* DreddIndex.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */; };
-		F4165B0E21B976E2005CCDF0 /* DreddIndex.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */; };
 		F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BE921B6A46000F63601 /* PublishedCell.swift */; };
 		F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */; };
 		F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E88021B1EB250010B2F6 /* AppDelegate.swift */; };
@@ -20,9 +17,9 @@
 		F424E88E21B1EB250010B2F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424E88C21B1EB250010B2F6 /* LaunchScreen.storyboard */; };
 		F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E89821B1EB250010B2F6 /* MCIndexTests.swift */; };
 		F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8A321B1EB250010B2F6 /* MCIndexUITests.swift */; };
-		F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */; };
-		F424E8B321B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */; };
-		F424E8B421B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */; };
+		F424E8B221B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */; };
+		F424E8B321B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */; };
+		F424E8B421B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */; };
 		F424E8BA21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
 		F424E8BB21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
 		F424E8BC21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
@@ -34,6 +31,9 @@
 		F43F6CC921B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F43F6CCA21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		F43F6CCB21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
+		F44203B52229AB39007257A1 /* DreddIndex2.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F44203B22229AB38007257A1 /* DreddIndex2.sqlite-shm */; };
+		F44203B62229AB39007257A1 /* DreddIndex2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F44203B32229AB38007257A1 /* DreddIndex2.sqlite */; };
+		F44203B72229AB39007257A1 /* DreddIndex2.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F44203B42229AB38007257A1 /* DreddIndex2.sqlite-wal */; };
 		F443DC2B222007E400CE4CB2 /* ArtDroidTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443DC2A222007E400CE4CB2 /* ArtDroidTableViewController.swift */; };
 		F443DC2D2220080700CE4CB2 /* ScriptDroidTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443DC2C2220080700CE4CB2 /* ScriptDroidTableViewController.swift */; };
 		F443DC2F2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F443DC2E2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift */; };
@@ -73,9 +73,6 @@
 /* Begin PBXFileReference section */
 		F401903821B68F2100754C77 /* VolumeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeCell.swift; sourceTree = "<group>"; };
 		F403272622259FE300A11DB0 /* ExtUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtUIView.swift; sourceTree = "<group>"; };
-		F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex.sqlite; sourceTree = "<group>"; };
-		F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-wal"; sourceTree = "<group>"; };
-		F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex.sqlite-shm"; sourceTree = "<group>"; };
 		F4217BE621B69E2800F63601 /* FoldingVolumesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingVolumesTableView.swift; sourceTree = "<group>"; };
 		F4217BE921B6A46000F63601 /* PublishedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedCell.swift; sourceTree = "<group>"; };
 		F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailCell.swift; sourceTree = "<group>"; };
@@ -91,10 +88,13 @@
 		F424E89F21B1EB250010B2F6 /* MCIndexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCIndexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424E8A321B1EB250010B2F6 /* MCIndexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCIndexUITests.swift; sourceTree = "<group>"; };
 		F424E8A521B1EB250010B2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreddIndex.xcdatamodel; sourceTree = "<group>"; };
+		F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreddIndex2.xcdatamodel; sourceTree = "<group>"; };
 		F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreddTabBarController.swift; sourceTree = "<group>"; };
 		F424E8C521B1EC820010B2F6 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		F43F6CBF21B5BB6B005E4683 /* needsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needsContainer.swift; sourceTree = "<group>"; };
+		F44203B22229AB38007257A1 /* DreddIndex2.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex2.sqlite-shm"; sourceTree = "<group>"; };
+		F44203B32229AB38007257A1 /* DreddIndex2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex2.sqlite; sourceTree = "<group>"; };
+		F44203B42229AB38007257A1 /* DreddIndex2.sqlite-wal */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex2.sqlite-wal"; sourceTree = "<group>"; };
 		F443DC2A222007E400CE4CB2 /* ArtDroidTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtDroidTableViewController.swift; sourceTree = "<group>"; };
 		F443DC2C2220080700CE4CB2 /* ScriptDroidTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptDroidTableViewController.swift; sourceTree = "<group>"; };
 		F443DC2E2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByWriterTableViewController.swift; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 		F453410821B2026D00FDC49C /* DataModel Group */ = {
 			isa = PBXGroup;
 			children = (
-				F424E8B121B1EB740010B2F6 /* DreddIndex.xcdatamodel */,
+				F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */,
 				F453410921B2028800FDC49C /* Seed database */,
 				F453410621B2015700FDC49C /* DataModel.swift */,
 			);
@@ -232,9 +232,9 @@
 		F453410921B2028800FDC49C /* Seed database */ = {
 			isa = PBXGroup;
 			children = (
-				F4165B0921B976E1005CCDF0 /* DreddIndex.sqlite */,
-				F4165B0B21B976E1005CCDF0 /* DreddIndex.sqlite-shm */,
-				F4165B0A21B976E1005CCDF0 /* DreddIndex.sqlite-wal */,
+				F44203B32229AB38007257A1 /* DreddIndex2.sqlite */,
+				F44203B22229AB38007257A1 /* DreddIndex2.sqlite-shm */,
+				F44203B42229AB38007257A1 /* DreddIndex2.sqlite-wal */,
 			);
 			path = "Seed database";
 			sourceTree = "<group>";
@@ -366,11 +366,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4165B0C21B976E2005CCDF0 /* DreddIndex.sqlite in Resources */,
-				F4165B0E21B976E2005CCDF0 /* DreddIndex.sqlite-shm in Resources */,
+				F44203B52229AB39007257A1 /* DreddIndex2.sqlite-shm in Resources */,
 				F424E88E21B1EB250010B2F6 /* LaunchScreen.storyboard in Resources */,
+				F44203B62229AB39007257A1 /* DreddIndex2.sqlite in Resources */,
 				F424E88B21B1EB250010B2F6 /* Assets.xcassets in Resources */,
-				F4165B0D21B976E2005CCDF0 /* DreddIndex.sqlite-wal in Resources */,
+				F44203B72229AB39007257A1 /* DreddIndex2.sqlite-wal in Resources */,
 				F424E88621B1EB250010B2F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,7 +411,7 @@
 				F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */,
 				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
 				F403272722259FE300A11DB0 /* ExtUIView.swift in Sources */,
-				F424E8B221B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
+				F424E8B221B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */,
 				F48C38E22228255900F62F5A /* VolumeDetailsTableViewController.swift in Sources */,
 				F45ABDB12224AA6500E98C29 /* StoriesByWriterTableViewCell.swift in Sources */,
 				F493EF9422258E9B00851647 /* StoriesTableViewController.swift in Sources */,
@@ -430,7 +430,7 @@
 				F424E8BB21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
 				F43F6CC921B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */,
 				F43F6CCB21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */,
-				F424E8B321B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
+				F424E8B321B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */,
 				F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */,
 				F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */,
 				F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */,
@@ -444,7 +444,7 @@
 				F424E8BC21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
 				F43F6CC821B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */,
 				F43F6CCA21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */,
-				F424E8B421B1EB740010B2F6 /* DreddIndex.xcdatamodel in Sources */,
+				F424E8B421B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */,
 				F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */,
 				F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */,
 				F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */,

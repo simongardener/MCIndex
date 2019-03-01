@@ -35,7 +35,7 @@ class SearchingTableViewController: UITableViewController {
         searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
         searchController.searchBar.barTintColor = UIColor(white: 0.9, alpha: 0.9)
-        searchController.searchBar.placeholder = "Search by ******"
+        searchController.searchBar.placeholder = "filter"
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.delegate = self
         tableView.tableHeaderView = searchController.searchBar
