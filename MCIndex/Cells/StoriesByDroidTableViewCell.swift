@@ -29,11 +29,17 @@ class StoriesByDroidTableViewCell: UITableViewCell {
         var theTitle = story.title
         if theTitle == "" { theTitle = story.seriesName}
         title.text = theTitle
-//        if let issuesRun = story.issuesRun, issuesRun.isEmpty == false {
-//            source.text = issuesRun
-//        }else {
-//            source.text = "unknown"
-//        }
+        redBlock.backgroundColor = color(for: story)
     }
+    
+    fileprivate func color(for story: Story)-> UIColor{
+        if UserDefaults.shouldShowVolumeOwnership(){
+            return story.volume!.owned ? .red : .lightGray
+        }else {
+            return .red
+        }
+        
+    }
+    
 }
 

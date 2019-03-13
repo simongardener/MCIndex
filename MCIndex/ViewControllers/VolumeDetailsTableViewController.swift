@@ -22,9 +22,9 @@ class VolumeDetailsTableViewController: UITableViewController {
     var volume: Volume!
     var stories: [Story]!
     enum TableSection : Int, CaseIterable {
-        case title, cover, story, published
+        case title, cover, story, published, owned
     }
-    let cellId = ["VolumeCell","CoverCell", "StoryCell","PublishedCell"]
+    let cellId = ["VolumeCell","CoverCell", "StoryCell","PublishedCell", "SwitchCell"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,6 @@ class VolumeDetailsTableViewController: UITableViewController {
         
         switch  indexPath.section {
         case TableSection.title.rawValue:
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! VolumeCell
             cell.configure(with: volume)
             return cell
@@ -73,17 +72,30 @@ class VolumeDetailsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! StoryDetailCell
             cell.configure(with: volume, at: indexPath.row)
             return cell
-        default :
+
+        case TableSection.owned.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! SwitchTableViewCell
+            cell.switch.isOn = volume.owned
+            return cell
+        default:
+            fatalError("There is no default")
             return UITableViewCell()
         }
     }
     
+    @IBAction func ownedChanged(_ sender: UISwitch) {
+        volume.owned = sender.isOn
+        if UserDefaults.shouldShowVolumeOwnership() {
+            tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
+        }
+        UserDefaults.setShowVolumeOwnership(to: UserDefaults.shouldShowVolumeOwnership())
+    }
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let vc = segue.destination as? StoryDetailViewController else { fatalError("Not a StoryDetailVC")}
-        guard let indexPath = tableView.indexPathForSelectedRow else{fatalError("no vlaid selected indexpath")}
+        guard let indexPath = tableView.indexPathForSelectedRow else{fatalError("no valid selected indexpath")}
         vc.story = stories[indexPath.row]
     }
 }

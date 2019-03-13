@@ -35,5 +35,12 @@ class StoryBySeriesCell: UITableViewCell {
         }else {
             source.text = "unknown"
         }
+        if UserDefaults.shouldShowVolumeOwnership() {
+            redBlock.backgroundColor = (story.volume?.owned)! ? .red : .lightGray
+            
+        }else {
+            redBlock.backgroundColor = .red
+        }
+        
     }
 }

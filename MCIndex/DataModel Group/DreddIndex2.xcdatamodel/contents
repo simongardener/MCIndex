@@ -36,6 +36,7 @@
     <entity name="Volume" representedClassName="Volume" syncable="YES" codeGenerationType="class">
         <attribute name="coverArtist" attributeType="String" minValueString="3" syncable="YES"/>
         <attribute name="dateReleased" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hasBeenRead" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="issue" attributeType="Integer 16" minValueString="1" maxValueString="90" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="number" attributeType="Integer 16" minValueString="1" maxValueString="90" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="owned" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
@@ -53,7 +54,7 @@
         <element name="Colorist" positionX="-104.98828125" positionY="-151.34375" width="128" height="103"/>
         <element name="Letterer" positionX="-103.06640625" positionY="-82.5078125" width="128" height="103"/>
         <element name="Story" positionX="-293.96484375" positionY="-203.1171875" width="128" height="240"/>
-        <element name="Volume" positionX="-505.6015625" positionY="-141.46484375" width="128" height="150"/>
+        <element name="Volume" positionX="-505.6015625" positionY="-141.46484375" width="128" height="165"/>
         <element name="Writer" positionX="-125.10546875" positionY="10.265625" width="128" height="103"/>
     </elements>
 </model>

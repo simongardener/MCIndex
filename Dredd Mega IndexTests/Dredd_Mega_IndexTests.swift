@@ -1,15 +1,16 @@
 //
-//  MCIndexTests.swift
-//  MCIndexTests
+//  Dredd_Mega_IndexTests.swift
+//  Dredd Mega IndexTests
 //
-//  Created by Simon Gardener on 30/11/2018.
-//  Copyright © 2018 Simon Gardener. All rights reserved.
+//  Created by Simon Gardener on 12/03/2019.
+//  Copyright © 2019 Simon Gardener. All rights reserved.
 //
 
 import XCTest
-@testable import MCIndex
 
-class MCIndexTests: XCTestCase {
+@testable import Dredd_Mega_Index
+
+class Dredd_Mega_IndexTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -30,5 +31,13 @@ class MCIndexTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    func testShouldShowVolumeOwnership(){
+        UserDefaults.setShowVolumeOwnership(to: true)
+        XCTAssertTrue (UserDefaults.shouldShowVolumeOwnership())
+    }
+    
+    func testShouldShowVolumeIsOwnedIsFalse(){
+        UserDefaults.setShowVolumeOwnership(to: false)
+        XCTAssertFalse(UserDefaults.shouldShowVolumeOwnership())
+    }
 }

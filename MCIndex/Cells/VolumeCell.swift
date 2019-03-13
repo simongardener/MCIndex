@@ -28,6 +28,11 @@ class VolumeCell: UITableViewCell {
     func configure(with volume: Volume){
         volumeTitle.text = volume.title
         volumeNumber.text = "\(volume.number)"
+        if UserDefaults.shouldShowVolumeOwnership() {
+        redBlock.backgroundColor = volume.owned ? .red: .lightGray
+        }else{
+            redBlock.backgroundColor = .red
+        }
         
     }
 }

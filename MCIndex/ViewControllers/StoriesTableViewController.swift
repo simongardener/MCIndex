@@ -17,13 +17,28 @@ class StoriesTableViewController: SearchingTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
-        
+        addObserver()
         self.tableView.tableFooterView = UIView() // makes empty rows disappear
         if stories.count > 12 {
             setupSearchController()
         }
     }
     
+    fileprivate func addObserver(){// Adds observer to watch for a change of user defaults
+    NotificationCenter.default.addObserver(self, selector: #selector(userDefaultsDidChange), name: UserDefaults.didChangeNotification, object: nil)
+    }
+    
+    @objc func userDefaultsDidChange(){
+        print("saw a change in userdefaults")
+        
+        tableView.reloadData()
+    }
+    
+    func viewWillDisappear()
+    {
+        NotificationCenter.default.removeObserver(self, name: UserDefaults.didChangeNotification, object: nil)
+    }
+
     override func setupSearchController() {
         super.setupSearchController()
         searchController.searchBar.placeholder = "filter story titles"

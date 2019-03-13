@@ -15,22 +15,15 @@
 		F424E88621B1EB250010B2F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424E88421B1EB250010B2F6 /* Main.storyboard */; };
 		F424E88B21B1EB250010B2F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F424E88A21B1EB250010B2F6 /* Assets.xcassets */; };
 		F424E88E21B1EB250010B2F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F424E88C21B1EB250010B2F6 /* LaunchScreen.storyboard */; };
-		F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E89821B1EB250010B2F6 /* MCIndexTests.swift */; };
-		F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8A321B1EB250010B2F6 /* MCIndexUITests.swift */; };
 		F424E8B221B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */; };
-		F424E8B321B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */; };
-		F424E8B421B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */; };
 		F424E8BA21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
-		F424E8BB21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
-		F424E8BC21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */; };
 		F424E8C621B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
-		F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
-		F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F424E8C521B1EC820010B2F6 /* Injectable.swift */; };
+		F428B095223818B8009986DC /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428B094223818B8009986DC /* UserDefaultsExtensions.swift */; };
+		F428B0A2223820B1009986DC /* Dredd_Mega_IndexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428B0A1223820B1009986DC /* Dredd_Mega_IndexTests.swift */; };
+		F428B0F42238252E009986DC /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428B0F32238252E009986DC /* SettingsTableViewController.swift */; };
+		F428B0F62238291E009986DC /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428B0F52238291E009986DC /* SwitchTableViewCell.swift */; };
+		F428B0F82239094A009986DC /* CreditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F428B0F72239094A009986DC /* CreditViewController.swift */; };
 		F43F6CC021B5BB6B005E4683 /* needsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43F6CBF21B5BB6B005E4683 /* needsContainer.swift */; };
-		F43F6CC821B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
-		F43F6CC921B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
-		F43F6CCA21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
-		F43F6CCB21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */; };
 		F44203B52229AB39007257A1 /* DreddIndex2.sqlite-shm in Resources */ = {isa = PBXBuildFile; fileRef = F44203B22229AB38007257A1 /* DreddIndex2.sqlite-shm */; };
 		F44203B62229AB39007257A1 /* DreddIndex2.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = F44203B32229AB38007257A1 /* DreddIndex2.sqlite */; };
 		F44203B72229AB39007257A1 /* DreddIndex2.sqlite-wal in Resources */ = {isa = PBXBuildFile; fileRef = F44203B42229AB38007257A1 /* DreddIndex2.sqlite-wal */; };
@@ -44,8 +37,6 @@
 		F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */; };
 		F45ABDB52225456400E98C29 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */; };
 		F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356721B70D1D009F2C72 /* StoryBySeriesCell.swift */; };
-		F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
-		F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F483356D21B72C6A009F2C72 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F483356921B72858009F2C72 /* ArtistCell.swift */; };
 		F48C38E22228255900F62F5A /* VolumeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48C38E12228255900F62F5A /* VolumeDetailsTableViewController.swift */; };
 		F493EF9422258E9B00851647 /* StoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493EF9322258E9B00851647 /* StoriesTableViewController.swift */; };
@@ -54,19 +45,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F424E89521B1EB250010B2F6 /* PBXContainerItemProxy */ = {
+		F428B0A4223820B1009986DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F424E87521B1EB250010B2F6 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = F424E87C21B1EB250010B2F6;
-			remoteInfo = MCIndex;
-		};
-		F424E8A021B1EB250010B2F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F424E87521B1EB250010B2F6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F424E87C21B1EB250010B2F6;
-			remoteInfo = MCIndex;
+			remoteInfo = "Dredd Mega Index";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -76,21 +60,25 @@
 		F4217BE621B69E2800F63601 /* FoldingVolumesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingVolumesTableView.swift; sourceTree = "<group>"; };
 		F4217BE921B6A46000F63601 /* PublishedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishedCell.swift; sourceTree = "<group>"; };
 		F4217BEB21B6A4FD00F63601 /* StoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailCell.swift; sourceTree = "<group>"; };
-		F424E87D21B1EB250010B2F6 /* MCIndex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MCIndex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F424E87D21B1EB250010B2F6 /* Dredd Mega Index.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dredd Mega Index.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424E88021B1EB250010B2F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F424E88521B1EB250010B2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F424E88A21B1EB250010B2F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F424E88D21B1EB250010B2F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F424E88F21B1EB250010B2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F424E89421B1EB250010B2F6 /* MCIndexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCIndexTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F424E89821B1EB250010B2F6 /* MCIndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCIndexTests.swift; sourceTree = "<group>"; };
 		F424E89A21B1EB250010B2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F424E89F21B1EB250010B2F6 /* MCIndexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MCIndexUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F424E8A321B1EB250010B2F6 /* MCIndexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCIndexUITests.swift; sourceTree = "<group>"; };
 		F424E8A521B1EB250010B2F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F424E8B121B1EB740010B2F6 /* DreddIndex2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DreddIndex2.xcdatamodel; sourceTree = "<group>"; };
 		F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreddTabBarController.swift; sourceTree = "<group>"; };
 		F424E8C521B1EC820010B2F6 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		F428B094223818B8009986DC /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		F428B09F223820B1009986DC /* Dredd Mega IndexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dredd Mega IndexTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F428B0A1223820B1009986DC /* Dredd_Mega_IndexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dredd_Mega_IndexTests.swift; sourceTree = "<group>"; };
+		F428B0A3223820B1009986DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F428B0F32238252E009986DC /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		F428B0F52238291E009986DC /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		F428B0F72239094A009986DC /* CreditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditViewController.swift; sourceTree = "<group>"; };
 		F43F6CBF21B5BB6B005E4683 /* needsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = needsContainer.swift; sourceTree = "<group>"; };
 		F44203B22229AB38007257A1 /* DreddIndex2.sqlite-shm */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DreddIndex2.sqlite-shm"; sourceTree = "<group>"; };
 		F44203B32229AB38007257A1 /* DreddIndex2.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DreddIndex2.sqlite; sourceTree = "<group>"; };
@@ -120,14 +108,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F424E89121B1EB250010B2F6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F424E89C21B1EB250010B2F6 /* Frameworks */ = {
+		F428B09C223820B1009986DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -151,6 +132,7 @@
 				F424E87F21B1EB250010B2F6 /* MCIndex */,
 				F424E89721B1EB250010B2F6 /* MCIndexTests */,
 				F424E8A221B1EB250010B2F6 /* MCIndexUITests */,
+				F428B0A0223820B1009986DC /* Dredd Mega IndexTests */,
 				F424E87E21B1EB250010B2F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,9 +140,8 @@
 		F424E87E21B1EB250010B2F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F424E87D21B1EB250010B2F6 /* MCIndex.app */,
-				F424E89421B1EB250010B2F6 /* MCIndexTests.xctest */,
-				F424E89F21B1EB250010B2F6 /* MCIndexUITests.xctest */,
+				F424E87D21B1EB250010B2F6 /* Dredd Mega Index.app */,
+				F428B09F223820B1009986DC /* Dredd Mega IndexTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +149,7 @@
 		F424E87F21B1EB250010B2F6 /* MCIndex */ = {
 			isa = PBXGroup;
 			children = (
+				F428B094223818B8009986DC /* UserDefaultsExtensions.swift */,
 				F4217BE521B69E1700F63601 /* Folding */,
 				F424E88421B1EB250010B2F6 /* Main.storyboard */,
 				F424E8B921B1EC350010B2F6 /* DreddTabBarController.swift */,
@@ -187,7 +169,6 @@
 		F424E89721B1EB250010B2F6 /* MCIndexTests */ = {
 			isa = PBXGroup;
 			children = (
-				F424E89821B1EB250010B2F6 /* MCIndexTests.swift */,
 				F424E89A21B1EB250010B2F6 /* Info.plist */,
 			);
 			path = MCIndexTests;
@@ -200,6 +181,15 @@
 				F424E8A521B1EB250010B2F6 /* Info.plist */,
 			);
 			path = MCIndexUITests;
+			sourceTree = "<group>";
+		};
+		F428B0A0223820B1009986DC /* Dredd Mega IndexTests */ = {
+			isa = PBXGroup;
+			children = (
+				F428B0A1223820B1009986DC /* Dredd_Mega_IndexTests.swift */,
+				F428B0A3223820B1009986DC /* Info.plist */,
+			);
+			path = "Dredd Mega IndexTests";
 			sourceTree = "<group>";
 		};
 		F43F6CC521B5BCA8005E4683 /* ViewControllers */ = {
@@ -215,6 +205,8 @@
 				F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */,
 				F48C38E12228255900F62F5A /* VolumeDetailsTableViewController.swift */,
 				F4C595CD2228A07000B38658 /* SearchingTableViewController.swift */,
+				F428B0F32238252E009986DC /* SettingsTableViewController.swift */,
+				F428B0F72239094A009986DC /* CreditViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -258,6 +250,7 @@
 				F483356921B72858009F2C72 /* ArtistCell.swift */,
 				F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */,
 				F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */,
+				F428B0F52238291E009986DC /* SwitchTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -265,9 +258,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F424E87C21B1EB250010B2F6 /* MCIndex */ = {
+		F424E87C21B1EB250010B2F6 /* Dredd Mega Index */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F424E8A821B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "MCIndex" */;
+			buildConfigurationList = F424E8A821B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "Dredd Mega Index" */;
 			buildPhases = (
 				F424E87921B1EB250010B2F6 /* Sources */,
 				F424E87A21B1EB250010B2F6 /* Frameworks */,
@@ -277,46 +270,28 @@
 			);
 			dependencies = (
 			);
-			name = MCIndex;
+			name = "Dredd Mega Index";
 			productName = MCIndex;
-			productReference = F424E87D21B1EB250010B2F6 /* MCIndex.app */;
+			productReference = F424E87D21B1EB250010B2F6 /* Dredd Mega Index.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F424E89321B1EB250010B2F6 /* MCIndexTests */ = {
+		F428B09E223820B1009986DC /* Dredd Mega IndexTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F424E8AB21B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "MCIndexTests" */;
+			buildConfigurationList = F428B0A6223820B1009986DC /* Build configuration list for PBXNativeTarget "Dredd Mega IndexTests" */;
 			buildPhases = (
-				F424E89021B1EB250010B2F6 /* Sources */,
-				F424E89121B1EB250010B2F6 /* Frameworks */,
-				F424E89221B1EB250010B2F6 /* Resources */,
+				F428B09B223820B1009986DC /* Sources */,
+				F428B09C223820B1009986DC /* Frameworks */,
+				F428B09D223820B1009986DC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F424E89621B1EB250010B2F6 /* PBXTargetDependency */,
+				F428B0A5223820B1009986DC /* PBXTargetDependency */,
 			);
-			name = MCIndexTests;
-			productName = MCIndexTests;
-			productReference = F424E89421B1EB250010B2F6 /* MCIndexTests.xctest */;
+			name = "Dredd Mega IndexTests";
+			productName = "Dredd Mega IndexTests";
+			productReference = F428B09F223820B1009986DC /* Dredd Mega IndexTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F424E89E21B1EB250010B2F6 /* MCIndexUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F424E8AE21B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "MCIndexUITests" */;
-			buildPhases = (
-				F424E89B21B1EB250010B2F6 /* Sources */,
-				F424E89C21B1EB250010B2F6 /* Frameworks */,
-				F424E89D21B1EB250010B2F6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F424E8A121B1EB250010B2F6 /* PBXTargetDependency */,
-			);
-			name = MCIndexUITests;
-			productName = MCIndexUITests;
-			productReference = F424E89F21B1EB250010B2F6 /* MCIndexUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -331,11 +306,7 @@
 					F424E87C21B1EB250010B2F6 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					F424E89321B1EB250010B2F6 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = F424E87C21B1EB250010B2F6;
-					};
-					F424E89E21B1EB250010B2F6 = {
+					F428B09E223820B1009986DC = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = F424E87C21B1EB250010B2F6;
 					};
@@ -354,9 +325,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F424E87C21B1EB250010B2F6 /* MCIndex */,
-				F424E89321B1EB250010B2F6 /* MCIndexTests */,
-				F424E89E21B1EB250010B2F6 /* MCIndexUITests */,
+				F424E87C21B1EB250010B2F6 /* Dredd Mega Index */,
+				F428B09E223820B1009986DC /* Dredd Mega IndexTests */,
 			);
 		};
 /* End PBXProject section */
@@ -375,14 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F424E89221B1EB250010B2F6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F424E89D21B1EB250010B2F6 /* Resources */ = {
+		F428B09D223820B1009986DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -401,7 +364,9 @@
 				F424E8BA21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
 				F443DC2D2220080700CE4CB2 /* ScriptDroidTableViewController.swift in Sources */,
 				F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */,
+				F428B0F62238291E009986DC /* SwitchTableViewCell.swift in Sources */,
 				F424E88121B1EB250010B2F6 /* AppDelegate.swift in Sources */,
+				F428B0F82239094A009986DC /* CreditViewController.swift in Sources */,
 				F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */,
 				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
 				F4C595CE2228A07000B38658 /* SearchingTableViewController.swift in Sources */,
@@ -410,6 +375,7 @@
 				F45ABDB52225456400E98C29 /* StoryDetailViewController.swift in Sources */,
 				F4217BEA21B6A46000F63601 /* PublishedCell.swift in Sources */,
 				F401903921B68F2100754C77 /* VolumeCell.swift in Sources */,
+				F428B0F42238252E009986DC /* SettingsTableViewController.swift in Sources */,
 				F403272722259FE300A11DB0 /* ExtUIView.swift in Sources */,
 				F424E8B221B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */,
 				F48C38E22228255900F62F5A /* VolumeDetailsTableViewController.swift in Sources */,
@@ -418,51 +384,27 @@
 				F443DC2F2220081E00CE4CB2 /* StoriesByWriterTableViewController.swift in Sources */,
 				F43F6CC021B5BB6B005E4683 /* needsContainer.swift in Sources */,
 				F443DC312220083100CE4CB2 /* StoriesByArtistTableViewController.swift in Sources */,
+				F428B095223818B8009986DC /* UserDefaultsExtensions.swift in Sources */,
 				F483356821B70D1D009F2C72 /* StoryBySeriesCell.swift in Sources */,
 				F424E8C621B1EC820010B2F6 /* Injectable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F424E89021B1EB250010B2F6 /* Sources */ = {
+		F428B09B223820B1009986DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F424E8BB21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
-				F43F6CC921B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */,
-				F43F6CCB21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */,
-				F424E8B321B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */,
-				F424E89921B1EB250010B2F6 /* MCIndexTests.swift in Sources */,
-				F424E8C721B1EC820010B2F6 /* Injectable.swift in Sources */,
-				F483356B21B72858009F2C72 /* ArtistCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F424E89B21B1EB250010B2F6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F424E8BC21B1EC350010B2F6 /* DreddTabBarController.swift in Sources */,
-				F43F6CC821B5BCB9005E4683 /* VolumesTableViewController.swift in Sources */,
-				F43F6CCA21B5BCBB005E4683 /* SeriesTableViewController.swift in Sources */,
-				F424E8B421B1EB740010B2F6 /* DreddIndex2.xcdatamodel in Sources */,
-				F424E8A421B1EB250010B2F6 /* MCIndexUITests.swift in Sources */,
-				F424E8C821B1EC820010B2F6 /* Injectable.swift in Sources */,
-				F483356C21B72858009F2C72 /* ArtistCell.swift in Sources */,
+				F428B0A2223820B1009986DC /* Dredd_Mega_IndexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F424E89621B1EB250010B2F6 /* PBXTargetDependency */ = {
+		F428B0A5223820B1009986DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F424E87C21B1EB250010B2F6 /* MCIndex */;
-			targetProxy = F424E89521B1EB250010B2F6 /* PBXContainerItemProxy */;
-		};
-		F424E8A121B1EB250010B2F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F424E87C21B1EB250010B2F6 /* MCIndex */;
-			targetProxy = F424E8A021B1EB250010B2F6 /* PBXContainerItemProxy */;
+			target = F424E87C21B1EB250010B2F6 /* Dredd Mega Index */;
+			targetProxy = F428B0A4223820B1009986DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -609,11 +551,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28P58W4QM2;
 				INFOPLIST_FILE = MCIndex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.me.MCIndex;
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.20thcenturyfish.MCIndex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -627,96 +570,55 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28P58W4QM2;
 				INFOPLIST_FILE = MCIndex/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.me.MCIndex;
+				PRODUCT_BUNDLE_IDENTIFIER = co.uk.20thcenturyfish.MCIndex;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		F424E8AC21B1EB250010B2F6 /* Debug */ = {
+		F428B0A7223820B1009986DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28P58W4QM2;
-				INFOPLIST_FILE = MCIndexTests/Info.plist;
+				INFOPLIST_FILE = "Dredd Mega IndexTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.me.MCIndexTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.me.Dredd-Mega-IndexTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCIndex.app/MCIndex";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dredd Mega Index.app/Dredd Mega Index";
 			};
 			name = Debug;
 		};
-		F424E8AD21B1EB250010B2F6 /* Release */ = {
+		F428B0A8223820B1009986DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 28P58W4QM2;
-				INFOPLIST_FILE = MCIndexTests/Info.plist;
+				INFOPLIST_FILE = "Dredd Mega IndexTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.me.MCIndexTests;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.me.Dredd-Mega-IndexTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MCIndex.app/MCIndex";
-			};
-			name = Release;
-		};
-		F424E8AF21B1EB250010B2F6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28P58W4QM2;
-				INFOPLIST_FILE = MCIndexUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.me.MCIndexUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MCIndex;
-			};
-			name = Debug;
-		};
-		F424E8B021B1EB250010B2F6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 28P58W4QM2;
-				INFOPLIST_FILE = MCIndexUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.me.MCIndexUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MCIndex;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dredd Mega Index.app/Dredd Mega Index";
 			};
 			name = Release;
 		};
@@ -732,7 +634,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F424E8A821B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "MCIndex" */ = {
+		F424E8A821B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "Dredd Mega Index" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F424E8A921B1EB250010B2F6 /* Debug */,
@@ -741,20 +643,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F424E8AB21B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "MCIndexTests" */ = {
+		F428B0A6223820B1009986DC /* Build configuration list for PBXNativeTarget "Dredd Mega IndexTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F424E8AC21B1EB250010B2F6 /* Debug */,
-				F424E8AD21B1EB250010B2F6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F424E8AE21B1EB250010B2F6 /* Build configuration list for PBXNativeTarget "MCIndexUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F424E8AF21B1EB250010B2F6 /* Debug */,
-				F424E8B021B1EB250010B2F6 /* Release */,
+				F428B0A7223820B1009986DC /* Debug */,
+				F428B0A8223820B1009986DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
