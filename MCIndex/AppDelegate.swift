@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     private let alreadyInstalled = "alreadyInstalledv2"
+
     var dataModel = DataModel()
     
     var window: UIWindow?
@@ -26,8 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        installSeedModelIfNeeded()
-        
+        installSeedModelIfNeeded()        
         let controller = self.window?.rootViewController as! DreddTabBarController
         controller.inject(dataModel)
 
@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        saveContext()
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
@@ -57,7 +58,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-
     // MARK: - Core Data stack
 
   
@@ -70,8 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             do {
                 try context.save()
             } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
                 let nserror = error as NSError
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }

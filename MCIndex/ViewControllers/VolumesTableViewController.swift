@@ -14,41 +14,31 @@ class VolumesTableViewController: SearchingTableViewController {
     var container: NSPersistentContainer!
     var filtered = [Volume]()
     let settingSegueId = "Settings"
+    let volumeSegueId = "VolumeDetails"
     var comingBackFrom = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         assertDependencies()
         fetchVolumes()
         frc.delegate = self
-        setMostVolumesToOwned()
         setupSearchController()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("SHOuld show ownership \(UserDefaults.shouldShowVolumeOwnership())")
         if !isMovingToParent && comingBackFrom == settingSegueId {
             tableView.reloadData()
         }
     }
-    fileprivate func setMostVolumesToOwned(){
-        guard let allVolumes = frc.fetchedObjects else { fatalError("no volumes")}
-    
-        for volume in allVolumes {
-            volume.hasBeenRead = false
-            volume.owned = true
-        }
-        for index in [1,6,9,12,32]{
-            allVolumes[index].owned = false
-        }
-        
-        
-    }
+
     override func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         filtered = (frc.fetchedObjects?.filter { $0.title!.lowercased().contains(searchText.lowercased())})!
         tableView.reloadData()
     }
     override func setupSearchController() {
         super.setupSearchController()
-         searchController.searchBar.placeholder = "filter volume names"
+        searchController.searchBar.placeholder = "filter volume names"
     }
     // MARK: - Table view data source
     
@@ -86,16 +76,31 @@ class VolumesTableViewController: SearchingTableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VolumeCell", for: indexPath) as! VolumeCell
         cell.configure(with: volume(at: indexPath))
+        if volume(at: indexPath).number == 1 {
+            print("volume 0 is \(volume(at: indexPath).owned)")
+        }
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         comingBackFrom = segue.identifier!
-        guard segue.identifier != settingSegueId else {return}
-        guard let indexPath = tableView.indexPathForSelectedRow else { fatalError()}
-        tableView.deselectRow(at: indexPath, animated: true)
-        guard let view = segue.destination as? VolumeDetailsTableViewController else {fatalError("wrong kind of viewController")}
-        view.inject(volume(at: indexPath))
+        switch segue.identifier {
+            
+        case settingSegueId:
+            guard let vc = segue.destination as? SettingsTableViewController else {fatalError("No SettingsTableViewController")}
+            guard let volumes = frc.fetchedObjects else { fatalError("No objects")}
+            vc.inject(volumes)
+            
+        case volumeSegueId:
+            guard let indexPath = tableView.indexPathForSelectedRow else { fatalError()}
+            tableView.deselectRow(at: indexPath, animated: true)
+            guard let view = segue.destination as? VolumeDetailsTableViewController else {fatalError("wrong kind of viewController")}
+            view.inject(volume(at: indexPath))
+            
+        default:
+            fatalError("unknonw segue id from volumesTableViewController")
+        
+        }
     }
     func volume(at indexPath: IndexPath)-> Volume{
         if isFiltering(){
@@ -113,7 +118,7 @@ extension VolumesTableViewController : NeedsContainer{
 }
 extension VolumesTableViewController : NSFetchedResultsControllerDelegate{
     
- 
+    
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
@@ -129,4 +134,3 @@ extension VolumesTableViewController : NSFetchedResultsControllerDelegate{
         }
     }
 }
-

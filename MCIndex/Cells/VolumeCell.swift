@@ -29,7 +29,7 @@ class VolumeCell: UITableViewCell {
         volumeTitle.text = volume.title
         volumeNumber.text = "\(volume.number)"
         if UserDefaults.shouldShowVolumeOwnership() {
-        redBlock.backgroundColor = volume.owned ? .red: .lightGray
+            redBlock.backgroundColor = volume.owned ? .red: .lightGray
         }else{
             redBlock.backgroundColor = .red
         }

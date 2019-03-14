@@ -22,9 +22,9 @@ class VolumeDetailsTableViewController: UITableViewController {
     var volume: Volume!
     var stories: [Story]!
     enum TableSection : Int, CaseIterable {
-        case title, cover, story, published, owned
+        case title, cover, ownedRead, story, published, owned, read
     }
-    let cellId = ["VolumeCell","CoverCell", "StoryCell","PublishedCell", "SwitchCell"]
+    let cellId = ["VolumeCell","CoverCell","OwnedRead", "StoryCell","PublishedCell", "OwnVolumeCell","ReadVolumeCell"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,9 +57,12 @@ class VolumeDetailsTableViewController: UITableViewController {
             return cell
             
         case TableSection.cover.rawValue:
-            
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! ArtistCell
+            cell.configure(with: volume)
+            return cell
             
+        case TableSection.ownedRead.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! OwnedReadTableViewCell
             cell.configure(with: volume)
             return cell
             
@@ -77,9 +80,14 @@ class VolumeDetailsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! SwitchTableViewCell
             cell.switch.isOn = volume.owned
             return cell
+            
+        case TableSection.read.rawValue:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! SwitchTableViewCell
+            cell.switch.isOn = volume.hasBeenRead
+            return cell
+            
         default:
             fatalError("There is no default")
-            return UITableViewCell()
         }
     }
     
@@ -90,6 +98,10 @@ class VolumeDetailsTableViewController: UITableViewController {
         }
         UserDefaults.setShowVolumeOwnership(to: UserDefaults.shouldShowVolumeOwnership())
     }
+    @IBAction func hasBeenReadChanged(_ sender: UISwitch) {
+        volume.hasBeenRead = sender.isOn
+    }
+    
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
