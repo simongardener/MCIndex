@@ -10,6 +10,7 @@ import Foundation
 
 struct UserDefaultsKeys {
     static let shouldShowOwnership = "shouldShowVolumeOwnership"
+    static let shouldShowRead = "shouldShowRead"
 }
 extension UserDefaults {
 
@@ -18,5 +19,13 @@ extension UserDefaults {
     }
     static func shouldShowVolumeOwnership()-> Bool {
        return UserDefaults.standard.bool(forKey: UserDefaultsKeys.shouldShowOwnership)
+    }
+    
+    static func shouldShowReadStatus()-> Bool {
+        return UserDefaults.standard.bool(forKey: UserDefaultsKeys.shouldShowRead)
+        
+    }
+    static func setShowReadStatus(to bool: Bool){
+        UserDefaults.standard.set(bool, forKey: UserDefaultsKeys.shouldShowRead)
     }
 }

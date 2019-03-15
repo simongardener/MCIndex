@@ -15,15 +15,16 @@ class SettingsTableViewController: UITableViewController {
         super.viewDidLoad()
         assertDependencies()
     }
-    // MARK: - Table view data source
-
- 
+  
     let numberOfRows = CellOrder.credits.rawValue + 1
 
     @IBAction func showOwnershipChanged(_ sender: UISwitch) {
     UserDefaults.setShowVolumeOwnership(to: sender.isOn)
     }
-    
+    @IBAction func showReadChanged(_ sender: UISwitch) {
+        UserDefaults.setShowReadStatus(to: sender.isOn)
+    }
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numberOfRows
     }
@@ -34,15 +35,19 @@ class SettingsTableViewController: UITableViewController {
         
         switch indexPath.row {
         case CellOrder.showOwned.rawValue:
-            guard  let cell = tableView.dequeueReusableCell(withIdentifier: CellID.SwitchCell.rawValue, for: indexPath) as? SwitchTableViewCell else {fatalError()}
+            guard  let cell = tableView.dequeueReusableCell(withIdentifier: CellID.showOwned.rawValue, for: indexPath) as? SwitchTableViewCell else {fatalError()}
             cell.switch.isOn = UserDefaults.shouldShowVolumeOwnership()
             return cell
+        case CellOrder.showRead.rawValue:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellID.showRead.rawValue, for: indexPath) as? SwitchTableViewCell else {fatalError()}
+            cell.switch.isOn = UserDefaults.shouldShowReadStatus()
+            return cell
         case CellOrder.setOwnership.rawValue :
-            return tableView.dequeueReusableCell(withIdentifier: CellID.OwnershipCell.rawValue , for: indexPath)
+            return tableView.dequeueReusableCell(withIdentifier: CellID.ownershipCell.rawValue , for: indexPath)
         case CellOrder.setRead.rawValue :
-            return tableView.dequeueReusableCell(withIdentifier: CellID.ReadCell.rawValue, for: indexPath)
+            return tableView.dequeueReusableCell(withIdentifier: CellID.readCell.rawValue, for: indexPath)
         case CellOrder.credits.rawValue:
-            return tableView.dequeueReusableCell(withIdentifier: CellID.CreditCell.rawValue, for: indexPath)
+            return tableView.dequeueReusableCell(withIdentifier: CellID.creditCell.rawValue, for: indexPath)
             
         default:
             fatalError()
@@ -69,13 +74,13 @@ class SettingsTableViewController: UITableViewController {
 
 extension SettingsTableViewController {
     enum SegueId: String {
-        case showOwned, setOwnership, setRead, credits
+        case showOwned, showRead, setOwnership, setRead, credits
     }
     enum CellOrder: Int {
-        case showOwned, setOwnership, setRead, credits
+        case showOwned, showRead, setOwnership, setRead, credits
     }
     enum CellID :String {
-        case  SwitchCell, OwnershipCell,ReadCell, CreditCell
+        case  showOwned, showRead, ownershipCell, readCell, creditCell
     }
     
 }

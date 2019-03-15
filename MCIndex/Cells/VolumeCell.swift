@@ -10,6 +10,7 @@ import UIKit
 
 class VolumeCell: UITableViewCell {
 
+    @IBOutlet weak var readMark: UILabel!
     @IBOutlet weak var redBlock: UIView!
     @IBOutlet weak var volumeTitle: UILabel!
     @IBOutlet weak var volumeNumber: UILabel!
@@ -25,7 +26,14 @@ class VolumeCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func configure(with volume: Volume){
+    func configure(with volume: Volume, hasReadMark : Bool = false){
+        if hasReadMark {
+            if UserDefaults.shouldShowReadStatus(){
+                readMark.isHidden = !volume.hasBeenRead
+            }else{
+                readMark.isHidden = true
+            }
+        }
         volumeTitle.text = volume.title
         volumeNumber.text = "\(volume.number)"
         if UserDefaults.shouldShowVolumeOwnership() {

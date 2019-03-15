@@ -144,12 +144,20 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o55-U0-XHR">
+                                                    <rect key="frame" x="45" y="40" width="7" height="12"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.0" blue="0.009270870451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="o55-U0-XHR" secondAttribute="trailing" constant="8" id="DWq-Sm-9mu"/>
                                                 <constraint firstItem="5fr-NI-yuA" firstAttribute="centerY" secondItem="Ghg-vt-FVK" secondAttribute="centerY" id="JYa-Hf-Q30"/>
                                                 <constraint firstItem="5fr-NI-yuA" firstAttribute="centerX" secondItem="Ghg-vt-FVK" secondAttribute="centerX" id="YXs-Dm-6GG"/>
                                                 <constraint firstAttribute="width" constant="60" id="bcd-r7-d6j"/>
+                                                <constraint firstAttribute="bottom" secondItem="o55-U0-XHR" secondAttribute="bottom" constant="8" id="enw-Nj-Mrg"/>
                                                 <constraint firstAttribute="height" constant="60" id="fEK-Mx-SpR"/>
                                             </constraints>
                                         </view>
@@ -173,6 +181,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="readMark" destination="o55-U0-XHR" id="doT-mb-G0B"/>
                                     <outlet property="redBlock" destination="Ghg-vt-FVK" id="ZR8-2j-4fh"/>
                                     <outlet property="volumeNumber" destination="5fr-NI-yuA" id="kYh-ly-6HN"/>
                                     <outlet property="volumeTitle" destination="jc0-8Z-MNV" id="0lo-Is-WcR"/>
@@ -196,7 +205,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WqM-Ui-uxi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="524" y="-910"/>
+            <point key="canvasLocation" x="523.125" y="-910.56338028169012"/>
         </scene>
         <!--Settings-->
         <scene sceneID="QNX-Ua-W4z">
@@ -207,7 +216,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SwitchCell" rowHeight="64" id="8y6-Y2-ha0" customClass="SwitchTableViewCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showOwned" rowHeight="64" id="8y6-Y2-ha0" customClass="SwitchTableViewCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8y6-Y2-ha0" id="1wE-u0-et8">
@@ -220,7 +229,7 @@
                                                 <action selector="showOwnershipChanged:" destination="OD4-YG-2gC" eventType="valueChanged" id="KhF-EV-T1R"/>
                                             </connections>
                                         </switch>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show unowned in gray" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTC-aZ-7JQ">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show unowned in grey" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cTC-aZ-7JQ">
                                             <rect key="frame" x="16" y="20" width="231" height="23.5"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
@@ -240,8 +249,41 @@
                                     <outlet property="switch" destination="x0G-pV-cbp" id="1ZO-1f-aZm"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="OwnershipCell" textLabel="Md3-xJ-O7c" rowHeight="64" style="IBUITableViewCellStyleDefault" id="uny-eg-5be" customClass="ArtistCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="showRead" rowHeight="64" id="Mdt-mT-rhC" customClass="SwitchTableViewCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mdt-mT-rhC" id="j5Z-Tf-Q9F">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Pn-bK-Gjv">
+                                            <rect key="frame" x="255" y="16.5" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="showReadChanged:" destination="OD4-YG-2gC" eventType="valueChanged" id="Ykr-mJ-81N"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show already read  'R'" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R4q-nZ-6Wt">
+                                            <rect key="frame" x="16" y="20" width="231" height="23.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="R4q-nZ-6Wt" secondAttribute="bottom" constant="20" symbolic="YES" id="AcI-oc-97Y"/>
+                                        <constraint firstItem="9Pn-bK-Gjv" firstAttribute="centerY" secondItem="j5Z-Tf-Q9F" secondAttribute="centerY" id="Lms-OG-muD"/>
+                                        <constraint firstItem="R4q-nZ-6Wt" firstAttribute="leading" secondItem="j5Z-Tf-Q9F" secondAttribute="leading" constant="16" id="Pxn-wZ-GPu"/>
+                                        <constraint firstAttribute="trailing" secondItem="9Pn-bK-Gjv" secondAttribute="trailing" constant="16" id="V70-UM-ebx"/>
+                                        <constraint firstItem="9Pn-bK-Gjv" firstAttribute="leading" secondItem="R4q-nZ-6Wt" secondAttribute="trailing" constant="8" id="YNQ-Vm-cSm"/>
+                                        <constraint firstItem="R4q-nZ-6Wt" firstAttribute="top" secondItem="j5Z-Tf-Q9F" secondAttribute="top" constant="20" symbolic="YES" id="sUQ-2h-o4B"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="switch" destination="9Pn-bK-Gjv" id="sUF-kE-G4k"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ownershipCell" textLabel="Md3-xJ-O7c" rowHeight="64" style="IBUITableViewCellStyleDefault" id="uny-eg-5be" customClass="ArtistCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="156" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uny-eg-5be" id="wpw-te-BLl">
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="63.5"/>
@@ -260,8 +302,8 @@
                                     <segue destination="oxJ-Eo-cuz" kind="show" identifier="setOwnership" id="nnb-KU-Hct"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReadCell" textLabel="xxp-ly-nCy" rowHeight="64" style="IBUITableViewCellStyleDefault" id="64S-R0-5Zn" customClass="ArtistCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="156" width="320" height="64"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="readCell" textLabel="xxp-ly-nCy" rowHeight="64" style="IBUITableViewCellStyleDefault" id="64S-R0-5Zn" customClass="ArtistCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="220" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="64S-R0-5Zn" id="VBN-IL-NqU">
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="63.5"/>
@@ -280,8 +322,8 @@
                                     <segue destination="oxJ-Eo-cuz" kind="show" identifier="setRead" id="ExU-bf-9eq"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CreditCell" textLabel="mes-qm-c23" rowHeight="64" style="IBUITableViewCellStyleDefault" id="q9y-t8-b2J" customClass="SwitchTableViewCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="220" width="320" height="64"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="creditCell" textLabel="mes-qm-c23" rowHeight="64" style="IBUITableViewCellStyleDefault" id="q9y-t8-b2J" customClass="SwitchTableViewCell" customModule="Dredd_Mega_Index" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="284" width="320" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q9y-t8-b2J" id="HXW-0Q-8rg">
                                     <rect key="frame" x="0.0" y="0.0" width="286" height="63.5"/>

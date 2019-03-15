@@ -26,7 +26,6 @@ class VolumesTableViewController: SearchingTableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("SHOuld show ownership \(UserDefaults.shouldShowVolumeOwnership())")
         if !isMovingToParent && comingBackFrom == settingSegueId {
             tableView.reloadData()
         }
@@ -75,10 +74,7 @@ class VolumesTableViewController: SearchingTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VolumeCell", for: indexPath) as! VolumeCell
-        cell.configure(with: volume(at: indexPath))
-        if volume(at: indexPath).number == 1 {
-            print("volume 0 is \(volume(at: indexPath).owned)")
-        }
+        cell.configure(with: volume(at: indexPath), hasReadMark: true)
         return cell
     }
     
