@@ -21,26 +21,28 @@ class StoryDetailViewController: UIViewController {
     @IBOutlet weak var colorLabelLabel: UILabel!
    
     var story:Story!
-
+    enum Droids :String {
+        case artists,writers,colorists,letterers
+    }
+    
+    let nameKey = "fullName"
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Story Details"
-        assert(story != nil, "No story passed into StrotyDetails")
+        assert(story != nil, "No story passed into StoryDetails")
         populateLabels()
-        
-        // Do any additional setup after loading the view.
     }
- 
+    
     func populateLabels(){
         storyLabel.text = story.title
         thrillLabel.text = story.seriesName
         sourceLabel.text = story.issuesRun
         volumeLabel.text = String(story.inVolume)+": "+(story.volume?.title)!
-        artDroidLabel.text = artDroids() ?? "unknown"
-        scriptDroidLabel.text = scriptDroids() ?? "unknown"
-        letterDroidLabel.text = letterDroids() ?? "unknown"
+        artDroidLabel.text = droids(for: Artist.self, withKey: Droids.artists.rawValue) ?? "unknown"
+        scriptDroidLabel.text = droids(for: Writer.self, withKey: Droids.writers.rawValue) ?? "unknown"
+        letterDroidLabel.text = droids(for: Letterer.self, withKey: Droids.letterers.rawValue) ?? "unknown"
         
-        if let colorists = colorDroids() {
+        if let colorists = droids(for: Colorist.self, withKey: Droids.colorists.rawValue) {
             colorDroidLabel.text = colorists
             colorDroidLabel.isHidden = false
             colorLabelLabel.isHidden = false
@@ -49,38 +51,14 @@ class StoryDetailViewController: UIViewController {
             colorDroidLabel.isHidden = true
         }
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    func artDroids()-> String? {
-        guard let droids = story.artists as? Set<Artist> else {
-            return nil
-        }
-        let droidNames = droids.map{$0.fullName!}
-        return droidNames.joined(separator: "\n")
-    }
-    func scriptDroids()-> String? {
-        guard let droids = story.writers as? Set<Writer> else {
-            return nil
-        }
-        let droidNames = droids.map{$0.fullName!}
-        return droidNames.joined(separator: "\n")
-    }
-    func colorDroids()-> String? {
-        guard let droids = story.colorists as? Set<Colorist>, !droids.isEmpty else {
-            return nil
-        }
-    
-        let droidNames = droids.map{$0.fullName!}
-        return droidNames.joined(separator: "\n")
-    }
-    func letterDroids()-> String? {
-        guard let droids = story.letterers as? Set<Letterer> else {
-            return nil
-        }
-        let droidNames = droids.map{$0.fullName!}
+    /// a generic function that takes a creator type and returns a string of the creator names
+    ///replaces seperate functions for  letterer, artists, writters and colorists
+    /// - Parameters:
+    ///   - key: relationShip name
+    /// - Returns: a string of creator names seperated by newline
+    func droids<T:NSManagedObject>(for _ :T.Type, withKey key : String) -> String? {
+        guard let droids = story.value(forKeyPath: key) as? Set<T>, !droids.isEmpty  else { return nil}
+        let droidNames = droids.map{$0.value(forKey: nameKey)! as! String}
         return droidNames.joined(separator: "\n")
     }
 }
-

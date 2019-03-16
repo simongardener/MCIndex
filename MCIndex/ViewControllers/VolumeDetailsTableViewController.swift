@@ -21,9 +21,6 @@ class VolumeDetailsTableViewController: UITableViewController {
     
     var volume: Volume!
     var stories: [Story]!
-    enum TableSection : Int, CaseIterable {
-        case title, cover, ownedRead, story, published, owned, read
-    }
     let cellId = ["VolumeCell","CoverCell","OwnedRead", "StoryCell","PublishedCell", "OwnVolumeCell","ReadVolumeCell"]
     
     override func viewDidLoad() {
@@ -34,14 +31,13 @@ class VolumeDetailsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    
     override func numberOfSections(in tableView: UITableView) -> Int{
-        return TableSection.allCases.count
+        return OptionOrder.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if section == TableSection.story.rawValue {
+        if section == OptionOrder.story.rawValue {
             return (volume.stories?.count)!
         }else {
             return 1
@@ -50,44 +46,43 @@ class VolumeDetailsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch  indexPath.section {
-        case TableSection.title.rawValue:
+        let sectionName = optionOrder(for: indexPath.section)
+        
+        switch  sectionName{
+        case .title :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! VolumeCell
             cell.configure(with: volume)
             return cell
             
-        case TableSection.cover.rawValue:
+        case .cover :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! ArtistCell
             cell.configure(with: volume)
             return cell
             
-        case TableSection.ownedRead.rawValue:
+        case .ownedRead :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! OwnedReadTableViewCell
             cell.configure(with: volume)
             return cell
             
-        case TableSection.published.rawValue:
+        case .published :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! PublishedCell
             cell.configure(with: volume)
             return cell
             
-        case TableSection.story.rawValue:
+        case .story :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! StoryDetailCell
             cell.configure(with: volume, at: indexPath.row)
             return cell
 
-        case TableSection.owned.rawValue:
+        case .owned :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! SwitchTableViewCell
             cell.switch.isOn = volume.owned
             return cell
             
-        case TableSection.read.rawValue:
+        case .read :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! SwitchTableViewCell
             cell.switch.isOn = volume.hasBeenRead
             return cell
-            
-        default:
-            fatalError("There is no default")
         }
     }
     
@@ -120,8 +115,11 @@ extension VolumeDetailsTableViewController : Injectable {
     func assertDependencies() {
         assert(volume != nil, "volume details table view controller was not passed a volume")
     }
-    
     typealias T = Volume
-    
 }
 
+extension VolumeDetailsTableViewController : OptionOrder {
+    enum OptionOrder: Int, CaseIterable{
+        case title, cover, ownedRead, story, published, owned, read
+    }
+}
