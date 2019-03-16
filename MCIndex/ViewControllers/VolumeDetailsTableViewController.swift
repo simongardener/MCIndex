@@ -30,13 +30,11 @@ class VolumeDetailsTableViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int{
         return OptionOrder.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         if section == OptionOrder.story.rawValue {
             return (volume.stories?.count)!
         }else {
@@ -47,7 +45,6 @@ class VolumeDetailsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let sectionName = optionOrder(for: indexPath.section)
-        
         switch  sectionName{
         case .title :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! VolumeCell

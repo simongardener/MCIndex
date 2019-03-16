@@ -16,7 +16,7 @@ class SeriesTableViewController: SearchingTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        assertDependencies()
+        assertDependencies()    
         fetchStories()
         setupSearchController()
     }

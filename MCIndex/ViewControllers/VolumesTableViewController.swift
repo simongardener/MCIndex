@@ -61,7 +61,6 @@ class VolumesTableViewController: SearchingTableViewController {
         return fetchedResultsController
     }()
     
-    
     fileprivate func fetchVolumes(){
         do {
             try frc.performFetch()
@@ -95,7 +94,6 @@ class VolumesTableViewController: SearchingTableViewController {
             
         default:
             fatalError("unknonw segue id from volumesTableViewController")
-        
         }
     }
     func volume(at indexPath: IndexPath)-> Volume{
@@ -113,7 +111,6 @@ extension VolumesTableViewController : NeedsContainer{
     }
 }
 extension VolumesTableViewController : NSFetchedResultsControllerDelegate{
-    
     
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()

@@ -35,6 +35,7 @@
 		F453410321B1F20B00FDC49C /* VolumesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410221B1F20B00FDC49C /* VolumesTableViewController.swift */; };
 		F453410721B2015700FDC49C /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F453410621B2015700FDC49C /* DataModel.swift */; };
 		F4542E59223D62E7000F32A2 /* OptionOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4542E58223D62E7000F32A2 /* OptionOrder.swift */; };
+		F4542E5B223DAD1B000F32A2 /* WarningMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4542E5A223DAD1B000F32A2 /* WarningMessage.swift */; };
 		F45ABDB12224AA6500E98C29 /* StoriesByWriterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */; };
 		F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */; };
 		F45ABDB52225456400E98C29 /* StoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */; };
@@ -95,6 +96,7 @@
 		F453410421B1F21E00FDC49C /* SeriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesTableViewController.swift; sourceTree = "<group>"; };
 		F453410621B2015700FDC49C /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		F4542E58223D62E7000F32A2 /* OptionOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionOrder.swift; sourceTree = "<group>"; };
+		F4542E5A223DAD1B000F32A2 /* WarningMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningMessage.swift; sourceTree = "<group>"; };
 		F45ABDB02224AA6500E98C29 /* StoriesByWriterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByWriterTableViewCell.swift; sourceTree = "<group>"; };
 		F45ABDB22224B60700E98C29 /* StoriesByDroidTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesByDroidTableViewCell.swift; sourceTree = "<group>"; };
 		F45ABDB42225456400E98C29 /* StoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				F424E88C21B1EB250010B2F6 /* LaunchScreen.storyboard */,
 				F424E88F21B1EB250010B2F6 /* Info.plist */,
 				F403272622259FE300A11DB0 /* ExtUIView.swift */,
+				F4542E5A223DAD1B000F32A2 /* WarningMessage.swift */,
 			);
 			path = MCIndex;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				F428B0F82239094A009986DC /* CreditViewController.swift in Sources */,
 				F45ABDB32224B60700E98C29 /* StoriesByDroidTableViewCell.swift in Sources */,
 				F453410721B2015700FDC49C /* DataModel.swift in Sources */,
+				F4542E5B223DAD1B000F32A2 /* WarningMessage.swift in Sources */,
 				F4C595CE2228A07000B38658 /* SearchingTableViewController.swift in Sources */,
 				F45EC451223AF7D9009D5284 /* OwnedReadTableViewCell.swift in Sources */,
 				F4217BEC21B6A4FD00F63601 /* StoryDetailCell.swift in Sources */,

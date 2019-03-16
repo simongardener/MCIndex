@@ -100,13 +100,12 @@ class StoriesByArtistTableViewController:SearchingTableViewController {
         return cell
     }
 
-    
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let vc = segue.destination as? StoryDetailViewController else { fatalError("Not a StoryDetailVC")}
         guard let sections = frc.sections else { fatalError("No sections in frc")}
-        guard let indexPath = tableView.indexPathForSelectedRow else{fatalError("no vlaid selected indexpath")}
+        guard let indexPath = tableView.indexPathForSelectedRow else{fatalError("no valid selected indexPath")}
         let story: Story
         if isFiltering() {
             story = filtered[indexPath.row]

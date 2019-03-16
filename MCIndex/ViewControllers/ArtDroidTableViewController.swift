@@ -77,9 +77,7 @@ class ArtDroidTableViewController: SearchingTableViewController{
         return cell
     }
     
-    
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let vc =  segue.destination as! StoriesByArtistTableViewController

@@ -49,24 +49,26 @@ class ChangeVolumePropertiesViewController: UIViewController {
     }
     
     @IBAction func markAllOwned(_ sender: Any) {
-        markAll(bool: true)
+        self.markAll(bool: true)
     }
     @IBAction func markAllUnowned(_ sender: Any) {
-        markAll(bool: false)
+        self.markAll(bool: false)
     }
     fileprivate func markAll(bool:Bool){
-        set(key: issueOrVolumeNumber[volumeNumber], inRange: 1, to: 90, owned: bool)
+        let completion =  {self.set(key: self.issueOrVolumeNumber[self.volumeNumber], inRange: 1, to: 90, owned: bool)}
+        present(Warning.confirm(message: "Do you really want to change all volumes?", completion: completion()), animated: true, completion: nil)
     }
     
     @IBAction func setRange(_ sender: Any) {
         guard let lower = validNumberFrom(fromNumberField), let higher = validNumberFrom(toNumberField) else{
-            print("not valid numbers")
-            return
+                present(Warning.message(), animated: true, completion: nil)
+        return
         }
         let isOwned = ownedOrUnowned.selectedSegmentIndex == propertyValueisTrue ? true:false
-        let whichCountingSysytem = issueOrVolumeNumber[issuesOrVolume.selectedSegmentIndex]
-        
-        set(key: whichCountingSysytem, inRange: lower, to: higher, owned: isOwned)
+        let whichCountingSystem = issueOrVolumeNumber[issuesOrVolume.selectedSegmentIndex]
+        let message = "Are you sure you want to change numbers \(lower) to \(higher)?"
+        let completionBlock = {self.set(key: whichCountingSystem, inRange: lower, to: higher, owned: isOwned)}
+        present(Warning.confirm(message: message, completion: completionBlock()) , animated: true, completion: nil)
     }
     
     fileprivate func validNumberFrom(_ textfield: UITextField) -> Int? {
@@ -101,12 +103,10 @@ class ChangeVolumePropertiesViewController: UIViewController {
 extension ChangeVolumePropertiesViewController : Injectable{
 
     func inject(_ injected: (allVolumes: [Volume], propertyKey: String, labelArray: [String], title:String)) {
-        print("inject called")
         volumes = injected.allVolumes
         propertyKey = injected.propertyKey
         ownedOreadLabels = injected.labelArray
         title = injected.title
-        print("inject finished")
     }
     
     func assertDependencies() {

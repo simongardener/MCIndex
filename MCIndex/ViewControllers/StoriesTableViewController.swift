@@ -29,8 +29,6 @@ class StoriesTableViewController: SearchingTableViewController {
     }
     
     @objc func userDefaultsDidChange(){
-        print("saw a change in userdefaults")
-        
         tableView.reloadData()
     }
     

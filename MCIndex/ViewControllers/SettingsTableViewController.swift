@@ -65,8 +65,6 @@ class SettingsTableViewController: UITableViewController {
         }
         if segue.identifier == SegueId.setRead.rawValue {
     guard let vc = segue.destination as? ChangeVolumePropertiesViewController else { fatalError("Not a ChangeVolumePropertiesViewController")}
-            print("vc = \(vc)")
-            print("about to inject")
             vc.inject((volumes,"hasBeenRead",["Mark all as Read","Mark all as Unread","read","unread"],"Read" ))
         }
     }
