@@ -52,7 +52,6 @@ class StoriesByWriterTableViewController: SearchingTableViewController{
         do{
             try frc.performFetch()
         }catch{
-            print("Unable to fetch artist")
             print("\(error), \(error.localizedDescription)")
         }
     }

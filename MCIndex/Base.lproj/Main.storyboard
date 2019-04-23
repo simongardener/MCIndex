@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGj-Ln-DtE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGj-Ln-DtE">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -604,33 +604,39 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="published:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP4-fi-URb">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="published:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP4-fi-URb">
                                             <rect key="frame" x="16" y="11" width="79.5" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79.5" id="jty-Uc-Rlu"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.009270870451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="issue label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-H0-EVv">
-                                            <rect key="frame" x="282" y="11" width="80.5" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="90" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Twy-H0-EVv">
+                                            <rect key="frame" x="276" y="11" width="24" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="24" id="VeH-EI-iZ6"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="date label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-eq-s0l">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzV-eq-s0l">
                                             <rect key="frame" x="103.5" y="11" width="75" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="issue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6B1-Vn-Ec8">
-                                            <rect key="frame" x="229" y="11" width="45" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="issue:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6B1-Vn-Ec8">
+                                            <rect key="frame" x="223" y="11" width="45" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.009270870451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Twy-H0-EVv" secondAttribute="trailing" constant="12.5" id="5TC-J5-34X"/>
+                                        <constraint firstAttribute="trailing" secondItem="Twy-H0-EVv" secondAttribute="trailing" constant="20" symbolic="YES" id="5TC-J5-34X"/>
                                         <constraint firstItem="6B1-Vn-Ec8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bzV-eq-s0l" secondAttribute="trailing" constant="8" symbolic="YES" id="IC1-sg-Fnq"/>
                                         <constraint firstItem="SP4-fi-URb" firstAttribute="leading" secondItem="Kwl-Tp-Cpc" secondAttribute="leading" constant="16" id="Iy9-n1-8Cr"/>
                                         <constraint firstItem="SP4-fi-URb" firstAttribute="top" secondItem="Kwl-Tp-Cpc" secondAttribute="top" constant="11" id="RVd-M8-c8m"/>
@@ -715,6 +721,7 @@
                                     <constraints>
                                         <constraint firstItem="hqq-QU-vth" firstAttribute="leading" secondItem="7Pe-ol-XWm" secondAttribute="trailing" constant="7.5" id="0om-Gv-xgd"/>
                                         <constraint firstItem="eey-3j-Hcc" firstAttribute="leading" secondItem="5An-kk-QlU" secondAttribute="leading" constant="16" id="93d-C7-O2w"/>
+                                        <constraint firstItem="7Pe-ol-XWm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7TN-uh-LFg" secondAttribute="trailing" constant="8" id="GJm-hq-C1Z"/>
                                         <constraint firstItem="7TN-uh-LFg" firstAttribute="firstBaseline" secondItem="eey-3j-Hcc" secondAttribute="firstBaseline" id="LfZ-LF-GMj"/>
                                         <constraint firstItem="7TN-uh-LFg" firstAttribute="leading" secondItem="eey-3j-Hcc" secondAttribute="trailing" constant="8" id="PwJ-9a-FEQ"/>
                                         <constraint firstItem="eey-3j-Hcc" firstAttribute="top" secondItem="5An-kk-QlU" secondAttribute="top" constant="11" id="ie8-1W-dnb"/>
@@ -880,7 +887,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAB-af-Tdg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378" y="-902"/>
+            <point key="canvasLocation" x="1376.25" y="-902.11267605633805"/>
         </scene>
         <!--Series-->
         <scene sceneID="N7o-jG-hrQ">

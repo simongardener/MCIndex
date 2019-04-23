@@ -41,9 +41,7 @@ class FoldingVolumesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let section = frc.sections?[section] else {  print("going to return nil for rows in section")
-            return 0 }
-        print("number of volumes = \(section.numberOfObjects)")
+        guard let section = frc.sections?[section] else { return 0 }
         return section.numberOfObjects
     }
     
@@ -60,7 +58,6 @@ class FoldingVolumesTableViewController: UITableViewController {
             try frc.performFetch()
         }
         catch {
-            print(" unable to fetch volumes")
             print("\(error), \(error.localizedDescription)")
         }
     }

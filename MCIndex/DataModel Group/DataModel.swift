@@ -25,8 +25,7 @@ class DataModel {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
-        print("container : \(persistentContainer)")
-        
+       // print("container : \(persistentContainer)")
         return persistentContainer
     }()
     
@@ -50,11 +49,11 @@ class DataModel {
     
     func installSeedModel (){
         guard let seedSqlURL = Bundle.main.url(forResource: dBName, withExtension: sqlType) else { fatalError("These is no presupplied seed database")}
-        print("seedSQLURL\(seedSqlURL)")
+      //  print("seedSQLURL\(seedSqlURL)")
         let psc = container.persistentStoreCoordinator
         
         let destURLS = psc.url(for: psc.persistentStores.first!)
-        print("destURL\(destURLS)")
+     //   print("destURL\(destURLS)")
         //     let sqlDestintationURL = psc.url(for: psc.per )
         do {
             try  psc.replacePersistentStore(at: destURLS, destinationOptions: nil, withPersistentStoreFrom: seedSqlURL, sourceOptions: nil, ofType: NSSQLiteStoreType)

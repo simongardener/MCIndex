@@ -81,17 +81,15 @@ class ChangeVolumePropertiesViewController: UIViewController {
         let indexRange = CountableClosedRange(uncheckedBounds: (from, to))
         if key == issueOrVolumeNumber[volumeNumber] {
             for index in indexRange {
-                print("index\(index)")
                 volumes[index-1].setValue(owned, forKey: propertyKey)
             }
         }else {
             let filteredVolumes =  volumes.filter{indexRange.contains(Int($0.issue))}
             for volume in filteredVolumes {
                 volume.setValue(owned, forKey: propertyKey)
-                
             }
         }
-        volumesOwnershipStatement()
+      //  volumesOwnershipStatement()
     }
     fileprivate func volumesOwnershipStatement(){
         for volume in volumes {

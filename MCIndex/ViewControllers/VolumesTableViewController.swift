@@ -66,7 +66,6 @@ class VolumesTableViewController: SearchingTableViewController {
             try frc.performFetch()
         }
         catch {
-            print(" unable to fetch volumes")
             print("\(error), \(error.localizedDescription)")
         }
     }

@@ -59,9 +59,7 @@ class ScriptDroidTableViewController:SearchingTableViewController {
         do{
             try frc.performFetch()
         }catch{
-            print("Unable to fetch artist")
             print("\(error), \(error.localizedDescription)")
-            
         }
     }
     

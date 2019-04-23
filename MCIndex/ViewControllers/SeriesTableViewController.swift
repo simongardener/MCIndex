@@ -56,7 +56,6 @@ class SeriesTableViewController: SearchingTableViewController {
         do{
             try frc.performFetch()
         }catch{
-            print("Unable to fetch stories")
             print("\(error), \(error.localizedDescription)")
             
         }
