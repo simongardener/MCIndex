@@ -57,7 +57,6 @@ class SeriesTableViewController: SearchingTableViewController {
             try frc.performFetch()
         }catch{
             print("\(error), \(error.localizedDescription)")
-            
         }
     }
     
