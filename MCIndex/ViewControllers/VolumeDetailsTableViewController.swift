@@ -85,15 +85,16 @@ class VolumeDetailsTableViewController: UITableViewController {
     
     @IBAction func ownedChanged(_ sender: UISwitch) {
         volume.owned = sender.isOn
-        if UserDefaults.shouldShowVolumeOwnership() {
-            tableView.reloadSections(IndexSet(integer: 0), with: .automatic)
-        }
-        UserDefaults.setShowVolumeOwnership(to: UserDefaults.shouldShowVolumeOwnership())
+        reloadOwnedRead()
     }
     @IBAction func hasBeenReadChanged(_ sender: UISwitch) {
         volume.hasBeenRead = sender.isOn
+        reloadOwnedRead()
     }
     
+    fileprivate func reloadOwnedRead(){
+        tableView.reloadRows(at: [IndexPath(row: 0, section: OptionOrder.ownedRead.rawValue)], with: .automatic)
+    }
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation

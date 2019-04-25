@@ -707,28 +707,27 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="read:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pe-ol-XWm">
-                                            <rect key="frame" x="140.5" y="11" width="39" height="21"/>
+                                            <rect key="frame" x="226" y="11" width="39" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.009270870451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="yes/no" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqq-QU-vth">
-                                            <rect key="frame" x="187" y="11" width="51" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqq-QU-vth">
+                                            <rect key="frame" x="273" y="11" width="27" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="hqq-QU-vth" firstAttribute="leading" secondItem="7Pe-ol-XWm" secondAttribute="trailing" constant="7.5" id="0om-Gv-xgd"/>
+                                        <constraint firstItem="hqq-QU-vth" firstAttribute="leading" secondItem="7Pe-ol-XWm" secondAttribute="trailing" constant="8" id="0om-Gv-xgd"/>
                                         <constraint firstItem="eey-3j-Hcc" firstAttribute="leading" secondItem="5An-kk-QlU" secondAttribute="leading" constant="16" id="93d-C7-O2w"/>
                                         <constraint firstItem="7Pe-ol-XWm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7TN-uh-LFg" secondAttribute="trailing" constant="8" id="GJm-hq-C1Z"/>
                                         <constraint firstItem="7TN-uh-LFg" firstAttribute="firstBaseline" secondItem="eey-3j-Hcc" secondAttribute="firstBaseline" id="LfZ-LF-GMj"/>
                                         <constraint firstItem="7TN-uh-LFg" firstAttribute="leading" secondItem="eey-3j-Hcc" secondAttribute="trailing" constant="8" id="PwJ-9a-FEQ"/>
                                         <constraint firstItem="eey-3j-Hcc" firstAttribute="top" secondItem="5An-kk-QlU" secondAttribute="top" constant="11" id="ie8-1W-dnb"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hqq-QU-vth" secondAttribute="trailing" constant="20" symbolic="YES" id="m4h-DU-iKu"/>
+                                        <constraint firstAttribute="trailing" secondItem="hqq-QU-vth" secondAttribute="trailing" constant="20" symbolic="YES" id="m4h-DU-iKu"/>
                                         <constraint firstAttribute="bottom" secondItem="eey-3j-Hcc" secondAttribute="bottom" constant="12" id="n09-BR-fdR"/>
-                                        <constraint firstItem="7Pe-ol-XWm" firstAttribute="centerX" secondItem="5An-kk-QlU" secondAttribute="centerX" id="nKF-V3-fUm"/>
                                         <constraint firstItem="7Pe-ol-XWm" firstAttribute="firstBaseline" secondItem="eey-3j-Hcc" secondAttribute="firstBaseline" id="rXP-u3-2Ip"/>
                                         <constraint firstItem="hqq-QU-vth" firstAttribute="firstBaseline" secondItem="eey-3j-Hcc" secondAttribute="firstBaseline" id="t7i-cc-lbX"/>
                                     </constraints>
