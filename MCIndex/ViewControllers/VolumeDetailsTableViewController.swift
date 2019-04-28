@@ -31,11 +31,11 @@ class VolumeDetailsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int{
-        return OptionOrder.allCases.count
+        return TableOrder.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == OptionOrder.story.rawValue {
+        if section == TableOrder.story.rawValue {
             return (volume.stories?.count)!
         }else {
             return 1
@@ -44,7 +44,7 @@ class VolumeDetailsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let sectionName = optionOrder(for: indexPath.section)
+        let sectionName = tableOrder(for: indexPath.section)
         switch  sectionName{
         case .title :
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId[indexPath.section], for: indexPath) as! VolumeCell
@@ -93,7 +93,7 @@ class VolumeDetailsTableViewController: UITableViewController {
     }
     
     fileprivate func reloadOwnedRead(){
-        tableView.reloadRows(at: [IndexPath(row: 0, section: OptionOrder.ownedRead.rawValue)], with: .automatic)
+        tableView.reloadRows(at: [IndexPath(row: 0, section: TableOrder.ownedRead.rawValue)], with: .automatic)
     }
     // MARK: - Navigation
     
@@ -116,8 +116,8 @@ extension VolumeDetailsTableViewController : Injectable {
     typealias T = Volume
 }
 
-extension VolumeDetailsTableViewController : OptionOrder {
-    enum OptionOrder: Int, CaseIterable{
+extension VolumeDetailsTableViewController : TableOrder {
+    enum TableOrder: Int, CaseIterable{
         case title, cover, ownedRead, story, published, owned, read
     }
 }

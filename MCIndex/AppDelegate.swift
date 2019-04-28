@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
    
+    
     fileprivate func installSeedModelIfNeeded() {
         if UserDefaults.standard.bool(forKey: alreadyInstalled) != true {
             dataModel.installSeedModel()
