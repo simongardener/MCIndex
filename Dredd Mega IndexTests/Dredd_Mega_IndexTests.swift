@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CoreData
 
 @testable import Dredd_Mega_Index
 
@@ -39,5 +40,10 @@ class Dredd_Mega_IndexTests: XCTestCase {
     func testShouldShowVolumeIsOwnedIsFalse(){
         UserDefaults.setShowVolumeOwnership(to: false)
         XCTAssertFalse(UserDefaults.shouldShowVolumeOwnership())
+    }
+    func testCountReturnsNumberOfEntityType() {
+        let dataModel = DataModel()
+        let count = dataModel.countEntity(Volume.self)
+        XCTAssertEqual(count, 90)
     }
 }

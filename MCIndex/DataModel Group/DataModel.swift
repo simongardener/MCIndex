@@ -14,8 +14,6 @@ class DataModel {
     private let dBName = "DreddIndex2"
     private let sqlType = "sqlite"
     
-    
-    
     lazy var container: NSPersistentContainer = {
         
         let persistentContainer = NSPersistentContainer(name: "DreddIndex2")
@@ -42,8 +40,22 @@ class DataModel {
         }
     }
     
-    func resetAllOwnedAndRead (){
-        
+    
+    /// Generic count method for NSManagedObject subclasses
+    ///
+    /// - Parameter entity: entity - an NSManagedObject Type
+    /// - Returns: the number of spcified NSManagedObject Type
+    func countEntity<T:NSManagedObject>(_ entity:T.Type)-> Int{
+        let entityName = String(describing: entity)
+        let fetchRequest = NSFetchRequest<T>(entityName: entityName)
+        do {
+            let number = try container.viewContext.count(for: fetchRequest)
+            return number
+        }
+        catch {
+            print(error.localizedDescription)
+            return 0
+        }
     }
     
     func installSeedModel (){

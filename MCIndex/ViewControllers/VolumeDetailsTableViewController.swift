@@ -116,7 +116,7 @@ extension VolumeDetailsTableViewController : Injectable {
     typealias T = Volume
 }
 
-extension VolumeDetailsTableViewController : TableOrder {
+extension VolumeDetailsTableViewController : TableOrderable {
     enum TableOrder: Int, CaseIterable{
         case title, cover, ownedRead, story, published, owned, read
     }

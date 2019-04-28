@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol TableOrder {
+protocol TableOrderable {
     associatedtype  TableOrder: RawRepresentable
 }
 
-extension TableOrder where TableOrder.RawValue == Int {
+extension TableOrderable where TableOrder.RawValue == Int {
 
     /// this function allows an enum to be used directly in a switch statement, reducing verbosity ie "TableOrder.someValue.rawValue" to  simply "someValue" and restricting the switch to a finite set of values so no default case is needed and compiler will flag missing case
     /// - Parameter position: an Integer, typically from an indexPath
